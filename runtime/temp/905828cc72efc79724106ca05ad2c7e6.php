@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\index.html";i:1533721518;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\form.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\th.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\td.html";i:1533714522;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:78:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\index.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\form.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\th.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\td.html";i:1533730692;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -58,22 +58,25 @@
         <thead>
         <tr class="text-c">
             <th width="25"><input type="checkbox"></th>
-<th width="">学生编号</th>
-<th width="">学号</th>
-<th width="">姓名</th>
-<th width="">性别</th>
-<th width="">联系地址</th>
+<th width="">企业编号</th>
+<th width="">企业名称</th>
+<th width="">地址</th>
+<th width="">联系人</th>
 <th width="">联系电话</th>
-<th width="">邮箱</th>
-<th width="">学历</th>
-<th width="">图片</th>
-<th width="">所在学校</th>
-<th width="">所在院系</th>
-<th width="">所在班级</th>
-<th width="">所在专业</th>
-<th width="">入学年份</th>
-<th width="">毕业年份</th>
-<th width="">状态</th>
+<th width="">企业简介</th>
+<th width="">企业性质</th>
+<th width="">所属行业</th>
+<th width="">企业规模</th>
+<th width="">营业执照</th>
+<th width="">税务登记证</th>
+<th width="">机构代码</th>
+<th width="">公司主页</th>
+<th width="">是否审核通过</th>
+<th width="">就业专员</th>
+<th width="">企业logo</th>
+<th width="">企业照片</th>
+<th width="">是否展示照片</th>
+<th width="">是否优秀企业</th>
 <th width="">登录用户编号</th>
             <th width="70">操作</th>
         </tr>
@@ -82,26 +85,28 @@
         <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <tr class="text-c">
             <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
-<td><?php echo $vo['identifier']; ?></td>
-<td><?php echo $vo['number']; ?></td>
-<td><?php echo $vo['fullname']; ?></td>
-<td><?php echo $vo['sex']; ?></td>
-<td><?php echo $vo['address']; ?></td>
-<td><?php echo $vo['telphone']; ?></td>
-<td><?php echo $vo['email']; ?></td>
-<td><?php echo $vo['education']; ?></td>
-<td><?php echo $vo['thumb']; ?></td>
-<td><?php echo $vo['school']; ?></td>
-<td><?php echo $vo['department']; ?></td>
-<td><?php echo $vo['class']; ?></td>
-<td><?php echo $vo['major']; ?></td>
-<td><?php echo $vo['entrytime']; ?></td>
-<td><?php echo $vo['graduateyear']; ?></td>
-<td><?php echo $vo['stustatus']; ?></td>
-<td><?php echo $vo['loginnum']; ?></td>
+<td><?php echo $vo['comcode']; ?></td>
+<td><?php echo $vo['comname']; ?></td>
+<td><?php echo $vo['comadress']; ?></td>
+<td><?php echo $vo['comname']; ?></td>
+<td><?php echo $vo['comtelphone']; ?></td>
+<td><?php echo $vo['comdesc']; ?></td>
+<td><?php echo $vo['comqua']; ?></td>
+<td><?php echo $vo['comcategory']; ?></td>
+<td><?php echo $vo['comscale']; ?></td>
+<td><?php echo $vo['comlicense']; ?></td>
+<td><?php echo $vo['comtaxreg']; ?></td>
+<td><?php echo $vo['commecode']; ?></td>
+<td><?php echo $vo['comhome']; ?></td>
+<td><?php echo $vo['comtfpass']; ?></td>
+<td><?php echo $vo['commissioner']; ?></td>
+<td><?php echo $vo['comlogo']; ?></td>
+<td><?php echo $vo['comthumb']; ?></td>
+<td><?php echo $vo['comtfthumb']; ?></td>
+<td><?php echo $vo['comtfexcellent']; ?></td>
+<td><?php echo $vo['loginid']; ?></td>
             <td class="f-14">
-<!--                 <?php echo show_status($vo['status'],$vo['id']); ?> -->
-                <?php if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
+                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
             </td>
         </tr>
         <?php endforeach; endif; else: echo "" ;endif; ?>

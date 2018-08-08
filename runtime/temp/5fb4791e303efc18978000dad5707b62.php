@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\index.html";i:1533722646;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\form.html";i:1533722646;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\th.html";i:1533722646;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\td.html";i:1533722646;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\login_log\index.html";i:1533694428;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\login_log\form.html";i:1533694428;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\login_log\th.html";i:1533694428;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\login_log\td.html";i:1533694428;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -45,38 +45,52 @@
 
 
 <div class="page-container">
-    
+    <form class="mb-20" method="get" action="<?php echo \think\Request::instance()->baseUrl(); ?>">
+    <input type="text" class="input-text" style="width:80px" placeholder="用户ID" name="uid" value="<?php echo \think\Request::instance()->param('uid'); ?>">
+    <input type="text" class="input-text" style="width:150px" placeholder="用户帐号" name="account" value="<?php echo \think\Request::instance()->param('account'); ?>">
+    <input type="text" class="input-text" style="width:150px" placeholder="用户姓名" name="name" value="<?php echo \think\Request::instance()->param('name'); ?>">
+    <input type="text" class="input-text" style="width:200px" placeholder="登录IP" name="login_ip" value="<?php echo \think\Request::instance()->param('login_ip'); ?>">
+    <input type="text" class="input-text" style="width:150px" placeholder="登录地点" name="login_location" value="<?php echo \think\Request::instance()->param('login_location'); ?>">
+    <button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+</form>
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
-            <?php if (\Rbac::AccessCheck('add')) : ?><a class="btn btn-primary radius mr-5" href="javascript:;" onclick="layer_open('添加','<?php echo \think\Url::build('add', []); ?>')"><i class="Hui-iconfont">&#xe600;</i> 添加</a><?php endif; if (\Rbac::AccessCheck('forbid')) : ?><a href="javascript:;" onclick="forbid_all('<?php echo \think\Url::build('forbid', []); ?>')" class="btn btn-warning radius mr-5"><i class="Hui-iconfont">&#xe631;</i> 禁用</a><?php endif; if (\Rbac::AccessCheck('resume')) : ?><a href="javascript:;" onclick="resume_all('<?php echo \think\Url::build('resume', []); ?>')" class="btn btn-success radius mr-5"><i class="Hui-iconfont">&#xe615;</i> 恢复</a><?php endif; if (\Rbac::AccessCheck('delete')) : ?><a href="javascript:;" onclick="del_all('<?php echo \think\Url::build('delete', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 删除</a><?php endif; if (\Rbac::AccessCheck('recyclebin')) : ?><a href="javascript:;" onclick="open_window('回收站','<?php echo \think\Url::build('recyclebin', []); ?>')" class="btn btn-secondary radius mr-5"><i class="Hui-iconfont">&#xe6b9;</i> 回收站</a><?php endif; ?>
         </span>
         <span class="r pt-5 pr-5">
-            共有数据 ：<strong><?php echo isset($count) ? $count :  '0'; ?></strong> 条
+            共有数据 ：<strong><?php echo $count; ?></strong> 条
         </span>
     </div>
     <table class="table table-border table-bordered table-hover table-bg mt-20">
         <thead>
         <tr class="text-c">
-            <th width="25"><input type="checkbox"></th>
-<th width="">班级编号</th>
-<th width="">班级名称</th>
-            <th width="70">操作</th>
+            <th width="25"><input type="checkbox" value="" name=""></th>
+<th width=""><?php echo sort_by('用户ID','uid'); ?></th>
+<th width=""><?php echo sort_by('用户帐号','account'); ?></th>
+<th width="">用户姓名</th>
+<th width="">登录IP</th>
+<th width="">登录地点</th>
+<th width="">浏览器</th>
+<th width="">操作系统</th>
+<th width="">登录时间</th>
         </tr>
         </thead>
         <tbody>
         <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <tr class="text-c">
             <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
-<td><?php echo $vo['classnum']; ?></td>
-<td><?php echo $vo['classname']; ?></td>
-            <td class="f-14">
-                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
-            </td>
+<td><?php echo high_light($vo['uid'],\think\Request::instance()->param('uid')); ?></td>
+<td><?php echo high_light($vo['user']['account'],\think\Request::instance()->param('account')); ?></td>
+<td><?php echo high_light($vo['user']['realname'],\think\Request::instance()->param('name')); ?></td>
+<td><?php echo $vo['login_ip']; ?></td>
+<td><?php echo high_light($vo['login_location'],\think\Request::instance()->param('login_location')); ?></td>
+<td><?php echo $vo['login_browser']; ?></td>
+<td><?php echo $vo['login_os']; ?></td>
+<td><?php echo $vo['login_time']; ?></td>
         </tr>
         <?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>
-    <div class="page-bootstrap"><?php echo isset($page) ? $page :  ''; ?></div>
+    <div class="page-bootstrap"><?php echo $page; ?></div>
 </div>
 
 <script type="text/javascript" src="__LIB__/jquery/1.9.1/jquery.min.js"></script>
