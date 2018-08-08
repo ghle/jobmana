@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:76:"/home/wwwroot/tpAdmin/public/../application/admin/view/admin_role/index.html";i:1488957234;s:73:"/home/wwwroot/tpAdmin/public/../application/admin/view/template/base.html";i:1488957234;s:84:"/home/wwwroot/tpAdmin/public/../application/admin/view/template/javascript_vars.html";i:1488957234;s:75:"/home/wwwroot/tpAdmin/public/../application/admin/view/admin_role/form.html";i:1488957234;s:73:"/home/wwwroot/tpAdmin/public/../application/admin/view/admin_role/th.html";i:1488957234;s:73:"/home/wwwroot/tpAdmin/public/../application/admin/view/admin_role/td.html";i:1488957234;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\admin_group\index.html";i:1533694432;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:78:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\admin_group\form.html";i:1533694430;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\admin_group\th.html";i:1533694432;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\admin_group\td.html";i:1533694432;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -46,12 +46,13 @@
 
 <div class="page-container">
     <form class="mb-20" method="get" action="<?php echo \think\Url::build(\think\Request::instance()->action()); ?>">
-    <input type="text" class="input-text" style="width:250px" placeholder="名称" name="name" value="<?php echo \think\Request::instance()->param('name'); ?>">
-    <button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+    <input type="text" class="input-text" style="width:250px" placeholder="分组名称" name="name"
+           value="<?php echo \think\Request::instance()->param('name'); ?>">
+    <button type="submit" class="btn btn-success"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
 </form>
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
-            <?php if (\Rbac::AccessCheck('add')) : ?><a class="btn btn-primary radius mr-5" href="javascript:;" onclick="layer_open('添加','<?php echo \think\Url::build('add', []); ?>')"><i class="Hui-iconfont">&#xe600;</i> 添加</a><?php endif; if (\Rbac::AccessCheck('forbid')) : ?><a href="javascript:;" onclick="forbid_all('<?php echo \think\Url::build('forbid', []); ?>')" class="btn btn-warning radius mr-5"><i class="Hui-iconfont">&#xe631;</i> 禁用</a><?php endif; if (\Rbac::AccessCheck('resume')) : ?><a href="javascript:;" onclick="resume_all('<?php echo \think\Url::build('resume', []); ?>')" class="btn btn-success radius mr-5"><i class="Hui-iconfont">&#xe615;</i> 恢复</a><?php endif; if (\Rbac::AccessCheck('delete')) : ?><a href="javascript:;" onclick="del_all('<?php echo \think\Url::build('delete', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 删除</a><?php endif; if (\Rbac::AccessCheck('recyclebin')) : ?><a href="javascript:;" onclick="open_window('回收站','<?php echo \think\Url::build('recyclebin', []); ?>')" class="btn btn-secondary radius mr-5"><i class="Hui-iconfont">&#xe6b9;</i> 回收站</a><?php endif; ?>
+            <?php if (\Rbac::AccessCheck('add')) : ?><a class="btn btn-primary radius mr-5" href="javascript:;" onclick="layer_open('添加','<?php echo \think\Url::build('add', []); ?>')"><i class="Hui-iconfont">&#xe600;</i> 添加</a><?php endif; if (\Rbac::AccessCheck('forbid')) : ?><a href="javascript:;" onclick="forbid_all('<?php echo \think\Url::build('forbid', []); ?>')" class="btn btn-warning radius mr-5"><i class="Hui-iconfont">&#xe631;</i> 禁用</a><?php endif; if (\Rbac::AccessCheck('resume')) : ?><a href="javascript:;" onclick="resume_all('<?php echo \think\Url::build('resume', []); ?>')" class="btn btn-success radius mr-5"><i class="Hui-iconfont">&#xe615;</i> 恢复</a><?php endif; if (\Rbac::AccessCheck('delete')) : ?><a href="javascript:;" onclick="del_all('<?php echo \think\Url::build('delete', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 删除</a><?php endif; if (\Rbac::AccessCheck('recyclebin')) : ?><a href="javascript:;" onclick="open_window('回收站','<?php echo \think\Url::build('recyclebin', []); ?>')" class="btn btn-secondary radius mr-5"><i class="Hui-iconfont">&#xe6b9;</i> 回收站</a><?php endif; if (\Rbac::AccessCheck('aveorder')) : ?><a href="javascript:;" onclick="saveOrder()" class="btn btn-primary radius mr-5"><i class="Hui-iconfont">&#xe632;</i> 保存排序</a><?php endif; ?>
         </span>
         <span class="r pt-5 pr-5">
             共有数据 ：<strong><?php echo $count; ?></strong> 条
@@ -61,10 +62,12 @@
         <thead>
         <tr class="text-c">
             <th width="25"><input type="checkbox" value="" name=""></th>
-<th width="50"><?php echo sort_by('ID','id'); ?></th>
-<th width="120"><?php echo sort_by('名称','name'); ?></th>
-<th width="80">状态</th>
-<th width="150">备注</th>
+<th width="40"><?php echo sort_by('ID','id'); ?></th>
+<th width="200">分组名称</th>
+<th width="60">小图标</th>
+<th width="60"><?php echo sort_by('排序','sort'); ?></th>
+<th width="200">备注</th>
+<th width="60"><?php echo sort_by('状态','status'); ?></th>
             <th width="70">操作</th>
         </tr>
         </thead>
@@ -74,10 +77,16 @@
             <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
 <td><?php echo $vo['id']; ?></td>
 <td><?php echo high_light($vo['name'],\think\Request::instance()->param('name')); ?></td>
-<td><?php echo get_status($vo['status']); ?></td>
+<td><i class="Hui-iconfont"><?php echo (htmlspecialchars_decode($vo['icon']) !== ''?htmlspecialchars_decode($vo['icon']):'&#xe616;'); ?></i></td>
+<td style="padding: 0">
+    <input type="number" name="sort[<?php echo $vo['id']; ?>]" value="<?php echo $vo['sort']; ?>" style="width: 60px;"
+           class="input-text text-c order-input" data-id="<?php echo $vo['id']; ?>">
+</td>
 <td><?php echo $vo['remark']; ?></td>
+<td><?php echo get_status($vo['status']); ?></td>
+
             <td class="f-14">
-                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; if (\Rbac::AccessCheck('user')) : ?> <a title="用户列表" href="javascript:;" onclick="layer_open('用户列表','<?php echo \think\Url::build('user', ['id' => $vo['id'], ]); ?>')" class="label radius ml-5 label-primary">用户列表</a><?php endif; if (\Rbac::AccessCheck('access')) : ?> <a title="授权" href="javascript:;" onclick="layer_open('授权','<?php echo \think\Url::build('access', ['id' => $vo['id'], ]); ?>')" class="label radius ml-5 label-primary">授权</a><?php endif; ?>
+                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
             </td>
         </tr>
         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -92,6 +101,10 @@
 <script type="text/javascript" src="__STATIC__/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="__STATIC__/js/app.js"></script>
 <script type="text/javascript" src="__LIB__/icheck/jquery.icheck.min.js"></script>
+
+<script>
+
+</script>
 
 </body>
 </html>

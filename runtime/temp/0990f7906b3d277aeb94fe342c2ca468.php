@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"/home/wwwroot/tpAdmin/public/../application/admin/view/index/welcome.html";i:1514029486;s:73:"/home/wwwroot/tpAdmin/public/../application/admin/view/template/base.html";i:1488957234;s:84:"/home/wwwroot/tpAdmin/public/../application/admin/view/template/javascript_vars.html";i:1488957234;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\index\welcome.html";i:1533694434;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
