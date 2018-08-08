@@ -61,12 +61,15 @@ trait Controller
      */
     public function add()
     {
+
         $controller = $this->request->controller();
 
         if ($this->request->isAjax()) {
+
+            
             // 插入
             $data = $this->request->except(['id']);
-
+            
             // 验证
             if (class_exists($validateClass = Loader::parseClass(Config::get('app.validate_path'), 'validate', $controller))) {
                 $validate = new $validateClass();

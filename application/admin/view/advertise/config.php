@@ -12,15 +12,15 @@ return array (
     5 => 'saveorder',
   ),
   'create_config' => true,
-  'controller' => 'Perman',
+  'controller' => 'Advertise',
   'title' => '',
   'form' => 
   array (
     0 => 
     array (
-      'title' => '学生编号',
-      'name' => 'identifier',
-      'type' => 'number',
+      'title' => '招聘编号',
+      'name' => 'advcode',
+      'type' => 'text',
       'option' => '',
       'default' => '',
       'search_type' => 'text',
@@ -33,8 +33,8 @@ return array (
     ),
     1 => 
     array (
-      'title' => '学号',
-      'name' => 'number',
+      'title' => '职位名称',
+      'name' => 'advname',
       'type' => 'text',
       'option' => '',
       'default' => '',
@@ -48,8 +48,8 @@ return array (
     ),
     2 => 
     array (
-      'title' => '姓名',
-      'name' => 'fullname',
+      'title' => '薪资待遇',
+      'name' => 'advtreatment',
       'type' => 'text',
       'option' => '',
       'default' => '',
@@ -61,175 +61,10 @@ return array (
         'errormsg' => '',
       ),
     ),
-    16 => 
+    3 => 
     array (
-      'title' => '性别',
-      'name' => 'sex',
-      'type' => 'radio',
-      'option' => '男#女',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    15 => 
-    array (
-      'title' => '联系地址',
-      'name' => 'address',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    14 => 
-    array (
-      'title' => '联系电话',
-      'name' => 'telphone',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    13 => 
-    array (
-      'title' => '邮箱',
-      'name' => 'email',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    12 => 
-    array (
-      'title' => '学历',
-      'name' => 'education',
-      'type' => 'text',
-      'option' => '高中#专科#本科#研究生',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    11 => 
-    array (
-      'title' => '图片',
-      'name' => 'thumb',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    10 => 
-    array (
-      'title' => '所在学校',
-      'name' => 'school',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    9 => 
-    array (
-      'title' => '所在院系',
-      'name' => 'department',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    8 => 
-    array (
-      'title' => '所在班级',
-      'name' => 'class',
-      'type' => 'text',
-      'option' => 'PHP开发班#UI 二班#UI一班#电商运营',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    7 => 
-    array (
-      'title' => '所在专业',
-      'name' => 'major',
-      'type' => 'text',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    6 => 
-    array (
-      'title' => '入学年份',
-      'name' => 'entrytime',
-      'type' => 'date',
-      'option' => '',
-      'default' => '',
-      'search_type' => 'text',
-      'validate' => 
-      array (
-        'datatype' => '',
-        'nullmsg' => '',
-        'errormsg' => '',
-      ),
-    ),
-    5 => 
-    array (
-      'title' => '毕业年份',
-      'name' => 'graduateyear',
+      'title' => '发布日期',
+      'name' => 'advpublish',
       'type' => 'date',
       'option' => '',
       'default' => '',
@@ -243,10 +78,10 @@ return array (
     ),
     4 => 
     array (
-      'title' => '状态',
-      'name' => 'stustatus',
-      'type' => 'radio',
-      'option' => '在职#求职',
+      'title' => '工作地点',
+      'name' => 'advaddress',
+      'type' => 'text',
+      'option' => '',
       'default' => '',
       'search_type' => 'text',
       'validate' => 
@@ -256,12 +91,147 @@ return array (
         'errormsg' => '',
       ),
     ),
-    3 => 
+    5 => 
     array (
-      'title' => '登录用户编号',
-      'name' => 'loginnum',
+      'title' => '工作性质',
+      'name' => 'advnature',
+      'type' => 'radio',
+      'option' => '全职#兼职',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    6 => 
+    array (
+      'title' => '工作经验',
+      'name' => 'advexperience',
+      'type' => 'text',
+      'option' => '',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    7 => 
+    array (
+      'title' => '学历要求',
+      'name' => 'adveducation',
+      'type' => 'select',
+      'option' => '高中#专科#本科#研究生#不限',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    8 => 
+    array (
+      'title' => '招聘人数',
+      'name' => 'advpeoplenum',
       'type' => 'number',
       'option' => '',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    9 => 
+    array (
+      'title' => '职位类别',
+      'name' => 'advcategory',
+      'type' => 'text',
+      'option' => '',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    10 => 
+    array (
+      'title' => '岗位职责',
+      'name' => 'advduty',
+      'type' => 'textarea',
+      'option' => '',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    11 => 
+    array (
+      'title' => '职位月薪',
+      'name' => 'advsalary',
+      'type' => 'text',
+      'option' => '',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    12 => 
+    array (
+      'title' => '是否招聘完成',
+      'name' => 'advfinnish',
+      'type' => 'text',
+      'option' => '是#否',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    13 => 
+    array (
+      'title' => '是否发布',
+      'name' => 'advtfpublish',
+      'type' => 'text',
+      'option' => '是#否',
+      'default' => '',
+      'search_type' => 'text',
+      'validate' => 
+      array (
+        'datatype' => '',
+        'nullmsg' => '',
+        'errormsg' => '',
+      ),
+    ),
+    14 => 
+    array (
+      'title' => '是否审核通过',
+      'name' => 'advexamine',
+      'type' => 'text',
+      'option' => '是#否',
       'default' => '',
       'search_type' => 'text',
       'validate' => 
@@ -279,142 +249,123 @@ return array (
   array (
     1 => 
     array (
-      'name' => 'identifier',
+      'name' => 'advcode',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '学生编号',
+      'comment' => '招聘编号',
       'extra' => '',
     ),
     2 => 
     array (
-      'name' => 'number',
+      'name' => 'advname',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '学号',
+      'comment' => '职位名称',
       'extra' => '',
     ),
     3 => 
     array (
-      'name' => 'fullname',
+      'name' => 'advtreatment',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '姓名',
+      'comment' => '薪资待遇',
       'extra' => '',
     ),
     4 => 
     array (
-      'name' => 'sex',
+      'name' => 'advpublish',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '性别',
+      'comment' => '发布日期',
       'extra' => '',
     ),
     5 => 
     array (
-      'name' => 'address',
+      'name' => 'advaddress',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '联系地址',
+      'comment' => '工作地点',
       'extra' => '',
     ),
     6 => 
     array (
-      'name' => 'telphone',
+      'name' => 'advnature',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '联系电话',
+      'comment' => '工作性质',
       'extra' => '',
     ),
     7 => 
     array (
-      'name' => 'email',
+      'name' => 'advexperience',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '邮箱',
+      'comment' => '工作经验',
       'extra' => '',
     ),
     8 => 
     array (
-      'name' => 'education',
+      'name' => 'adveducation',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '学历',
+      'comment' => '学历要求',
       'extra' => '',
     ),
     9 => 
     array (
-      'name' => 'thumb',
+      'name' => 'advpeoplenum',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '图片',
+      'comment' => '招聘人数',
       'extra' => '',
     ),
     10 => 
     array (
-      'name' => 'school',
+      'name' => 'advcategory',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '所在学校',
+      'comment' => '职位类别',
       'extra' => '',
     ),
     11 => 
     array (
-      'name' => 'department',
+      'name' => 'advduty',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '所在院系',
+      'comment' => '岗位职责',
       'extra' => '',
     ),
     12 => 
     array (
-      'name' => 'class',
+      'name' => 'advsalary',
       'type' => 'varchar(255)',
       'default' => 'NULL',
-      'comment' => '所在班级',
+      'comment' => '职位月薪',
       'extra' => '',
     ),
     13 => 
     array (
-      'name' => 'major',
-      'type' => 'varchar(255)',
+      'name' => 'advfinnish',
+      'type' => 'char(4)',
       'default' => 'NULL',
-      'comment' => '所在专业',
+      'comment' => '是否招聘完成',
       'extra' => '',
     ),
     14 => 
     array (
-      'name' => 'entrytime',
-      'type' => 'varchar(255)',
+      'name' => 'advtfpublish',
+      'type' => 'char(4)',
       'default' => 'NULL',
-      'comment' => '入学年份',
+      'comment' => '是否发布',
       'extra' => '',
     ),
     15 => 
     array (
-      'name' => 'graduateyear',
-      'type' => 'varchar(255)',
+      'name' => 'advexamine',
+      'type' => 'char(4)',
       'default' => 'NULL',
-      'comment' => '毕业年份',
-      'extra' => '',
-    ),
-    16 => 
-    array (
-      'name' => 'stustatus',
-      'type' => 'varchar(255)',
-      'default' => 'NULL',
-      'comment' => '状态',
-      'extra' => '',
-    ),
-    17 => 
-    array (
-      'name' => 'loginnum',
-      'type' => 'varchar(255)',
-      'default' => 'NULL',
-      'comment' => '登录用户编号',
+      'comment' => '是否审核通过',
       'extra' => '',
     ),
   ),
-  'model' => '1',
-  'auto_timestamp' => '1',
-  'validate' => '1',
 );

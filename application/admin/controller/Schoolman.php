@@ -5,7 +5,7 @@ namespace app\admin\controller;
 
 use app\admin\Controller;
 
-class Children extends Controller
+class Schoolman extends Controller
 {
     use \app\admin\traits\controller\Controller;
     // 方法黑名单

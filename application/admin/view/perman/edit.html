@@ -4,9 +4,16 @@
     <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
         <input type="hidden" name="id" value="{$vo.id ?? ''}">
         <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学生编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="number" class="input-text" placeholder="学生编号" name="identifier" value="{$vo.identifier ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">学号：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="学号" name="schoolnum" value="{$vo.schoolnum ?? ''}" >
+                <input type="text" class="input-text" placeholder="学号" name="number" value="{$vo.number ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -21,11 +28,11 @@
             <label class="form-label col-xs-3 col-sm-3">性别：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="sex" id="sex-" value="">
+                    <input type="radio" name="sex" id="sex-" value="0" checked="true">
                     <label for="sex-">男</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="sex" id="sex-" value="">
+                    <input type="radio" name="sex" id="sex-" value="1">
                     <label for="sex-">女</label>
                 </div>
             </div>
@@ -41,7 +48,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">联系电话：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="联系电话" name="phone" value="{$vo.phone ?? ''}" >
+                <input type="text" class="input-text" placeholder="联系电话" name="telphone" value="{$vo.telphone ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -55,14 +62,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">学历：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <div class="select-box">
-                    <select name="education" class="select">
-                        <option value="">高中</option>
-                        <option value="">专科</option>
-                        <option value="">本科</option>
-                        <option value="">研究生</option>
-                    </select>
-                </div>
+                <input type="text" class="input-text" placeholder="学历" name="education" value="{$vo.education ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -90,35 +90,28 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <div class="select-box">
-                    <select name="class" class="select">
-                        <option value="">UI一班</option>
-                        <option value="">UI二班</option>
-                        <option value="">电商运营班</option>
-                        <option value="">PHP开发班</option>
-                    </select>
-                </div>
+                <input type="text" class="input-text" placeholder="所在班级" name="class" value="{$vo.class ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">所学专业：</label>
+            <label class="form-label col-xs-3 col-sm-3">所在专业：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所学专业" name="major" value="{$vo.major ?? ''}" >
+                <input type="text" class="input-text" placeholder="所在专业" name="major" value="{$vo.major ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">入学年份：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text Wdate" placeholder="入学年份" name="enrollmentyear" value="{$vo.enrollmentyear ?? ''}" {literal} onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" {/literal} >
+                <input type="text" class="input-text Wdate" placeholder="入学年份" name="entrytime" value="{$vo.entrytime ?? ''}" {literal} onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" {/literal} >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">毕业年份：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text Wdate" placeholder="毕业年份" name="graduationyear" value="{$vo.graduationyear ?? ''}" {literal} onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" {/literal} >
+                <input type="text" class="input-text Wdate" placeholder="毕业年份" name="graduateyear" value="{$vo.graduateyear ?? ''}" {literal} onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" {/literal} >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -126,11 +119,11 @@
             <label class="form-label col-xs-3 col-sm-3">状态：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="">
+                    <input type="radio" name="stustatus" id="stustatus-" value="0" checked="true">
                     <label for="stustatus-">在职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="">
+                    <input type="radio" name="stustatus" id="stustatus-" value="1">
                     <label for="stustatus-">求职</label>
                 </div>
             </div>
@@ -139,7 +132,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">登录用户编号：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="登录用户编号" name="loginid" value="{$vo.loginid ?? ''}" >
+                <input type="number" class="input-text" placeholder="登录用户编号" name="loginnum" value="{$vo.loginnum ?? ''}" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -158,10 +151,9 @@
 <script type="text/javascript" src="__LIB__/My97DatePicker/WdatePicker.js"></script>
 <script>
     $(function () {
-        $("[name='sex'][value='{$vo.sex ?? '请选择'}']").prop("checked", true);
+        $("[name='sex'][value='{$vo.sex ?? ''}']").prop("checked", true);
+
         $("[name='stustatus'][value='{$vo.stustatus ?? ''}']").prop("checked", true);
-        $("[name='education']").find("[value='{$vo.education ?? '请选择'}']").attr("selected", true);
-        $("[name='class']").find("[value='{$vo.class ?? ''}']").attr("selected", true);
 
         $('.skin-minimal input').iCheck({
             checkboxClass: 'icheckbox-blue',
@@ -174,6 +166,7 @@
             ajaxPost: true,
             showAllError: true,
             callback: function (ret){
+
                 ajax_progress(ret);
             }
         });

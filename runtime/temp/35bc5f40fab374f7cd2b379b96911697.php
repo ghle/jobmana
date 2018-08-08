@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\edit.html";i:1533704754;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\edit.html";i:1533723590;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -48,142 +48,123 @@
     <form class="form form-horizontal" id="form" method="post" action="<?php echo \think\Request::instance()->baseUrl(); ?>">
         <input type="hidden" name="id" value="<?php echo isset($vo['id']) ? $vo['id'] :  ''; ?>">
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">学号：</label>
+            <label class="form-label col-xs-3 col-sm-3">招聘编号：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="学号" name="schoolnum" value="<?php echo isset($vo['schoolnum']) ? $vo['schoolnum'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="招聘编号" name="advcode" value="<?php echo isset($vo['advcode']) ? $vo['advcode'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">姓名：</label>
+            <label class="form-label col-xs-3 col-sm-3">职位名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="姓名" name="fullname" value="<?php echo isset($vo['fullname']) ? $vo['fullname'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="职位名称" name="advname" value="<?php echo isset($vo['advname']) ? $vo['advname'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">性别：</label>
+            <label class="form-label col-xs-3 col-sm-3">薪资待遇：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="薪资待遇" name="advtreatment" value="<?php echo isset($vo['advtreatment']) ? $vo['advtreatment'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">发布日期：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text Wdate" placeholder="发布日期" name="advpublish" value="<?php echo isset($vo['advpublish']) ? $vo['advpublish'] :  ''; ?>"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"  >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">工作地点：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="工作地点" name="advaddress" value="<?php echo isset($vo['advaddress']) ? $vo['advaddress'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">工作性质：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="sex" id="sex-" value="">
-                    <label for="sex-">男</label>
+                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <label for="advnature-">全职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="sex" id="sex-" value="">
-                    <label for="sex-">女</label>
+                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <label for="advnature-">兼职</label>
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">联系地址：</label>
+            <label class="form-label col-xs-3 col-sm-3">工作经验：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="联系地址" name="address" value="<?php echo isset($vo['address']) ? $vo['address'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="工作经验" name="advexperience" value="<?php echo isset($vo['advexperience']) ? $vo['advexperience'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">联系电话：</label>
-            <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="联系电话" name="phone" value="<?php echo isset($vo['phone']) ? $vo['phone'] :  ''; ?>" >
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">邮箱：</label>
-            <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="邮箱" name="email" value="<?php echo isset($vo['email']) ? $vo['email'] :  ''; ?>" >
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">学历：</label>
+            <label class="form-label col-xs-3 col-sm-3">学历要求：</label>
             <div class="formControls col-xs-6 col-sm-6">
                 <div class="select-box">
-                    <select name="education" class="select">
+                    <select name="adveducation" class="select">
                         <option value="">高中</option>
                         <option value="">专科</option>
                         <option value="">本科</option>
                         <option value="">研究生</option>
+                        <option value="">不限</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">图片：</label>
+            <label class="form-label col-xs-3 col-sm-3">招聘人数：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="图片" name="thumb" value="<?php echo isset($vo['thumb']) ? $vo['thumb'] :  ''; ?>" >
+                <input type="number" class="input-text" placeholder="招聘人数" name="advpeoplenum" value="<?php echo isset($vo['advpeoplenum']) ? $vo['advpeoplenum'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
+            <label class="form-label col-xs-3 col-sm-3">职位类别：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在学校" name="school" value="<?php echo isset($vo['school']) ? $vo['school'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="职位类别" name="advcategory" value="<?php echo isset($vo['advcategory']) ? $vo['advcategory'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">所在院系：</label>
+            <label class="form-label col-xs-3 col-sm-3">岗位职责：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在院系" name="department" value="<?php echo isset($vo['department']) ? $vo['department'] :  ''; ?>" >
+                <textarea class="textarea" placeholder="" name="advduty" onKeyUp="textarealength(this, 100)"><?php echo isset($vo['advduty']) ? $vo['advduty'] :  ''; ?></textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
+            <label class="form-label col-xs-3 col-sm-3">职位月薪：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <div class="select-box">
-                    <select name="class" class="select">
-                        <option value="">UI一班</option>
-                        <option value="">UI二班</option>
-                        <option value="">电商运营班</option>
-                        <option value="">PHP开发班</option>
-                    </select>
-                </div>
+                <input type="text" class="input-text" placeholder="职位月薪" name="advsalary" value="<?php echo isset($vo['advsalary']) ? $vo['advsalary'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">所学专业：</label>
+            <label class="form-label col-xs-3 col-sm-3">是否招聘完成：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所学专业" name="major" value="<?php echo isset($vo['major']) ? $vo['major'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="是否招聘完成" name="advfinnish" value="<?php echo isset($vo['advfinnish']) ? $vo['advfinnish'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">入学年份：</label>
+            <label class="form-label col-xs-3 col-sm-3">是否发布：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text Wdate" placeholder="入学年份" name="enrollmentyear" value="<?php echo isset($vo['enrollmentyear']) ? $vo['enrollmentyear'] :  ''; ?>"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"  >
+                <input type="text" class="input-text" placeholder="是否发布" name="advtfpublish" value="<?php echo isset($vo['advtfpublish']) ? $vo['advtfpublish'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">毕业年份：</label>
+            <label class="form-label col-xs-3 col-sm-3">是否审核通过：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text Wdate" placeholder="毕业年份" name="graduationyear" value="<?php echo isset($vo['graduationyear']) ? $vo['graduationyear'] :  ''; ?>"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"  >
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">状态：</label>
-            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
-                <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="">
-                    <label for="stustatus-">在职</label>
-                </div>
-                <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="">
-                    <label for="stustatus-">求职</label>
-                </div>
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">登录用户编号：</label>
-            <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="登录用户编号" name="loginid" value="<?php echo isset($vo['loginid']) ? $vo['loginid'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="是否审核通过" name="advexamine" value="<?php echo isset($vo['advexamine']) ? $vo['advexamine'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -208,10 +189,8 @@
 <script type="text/javascript" src="__LIB__/My97DatePicker/WdatePicker.js"></script>
 <script>
     $(function () {
-        $("[name='sex'][value='<?php echo isset($vo['sex']) ? $vo['sex'] :  '请选择'; ?>']").prop("checked", true);
-        $("[name='stustatus'][value='<?php echo isset($vo['stustatus']) ? $vo['stustatus'] :  ''; ?>']").prop("checked", true);
-        $("[name='education']").find("[value='<?php echo isset($vo['education']) ? $vo['education'] :  '请选择'; ?>']").attr("selected", true);
-        $("[name='class']").find("[value='<?php echo isset($vo['class']) ? $vo['class'] :  ''; ?>']").attr("selected", true);
+        $("[name='advnature'][value='<?php echo isset($vo['advnature']) ? $vo['advnature'] :  ''; ?>']").prop("checked", true);
+        $("[name='adveducation']").find("[value='<?php echo isset($vo['adveducation']) ? $vo['adveducation'] :  ''; ?>']").attr("selected", true);
 
         $('.skin-minimal input').iCheck({
             checkboxClass: 'icheckbox-blue',
