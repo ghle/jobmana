@@ -1,8 +1,52 @@
-{extend name="template/base" /}
-{block name="content"}
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\edit.html";i:1533822290;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title><?php echo \think\Config::get('site.title'); ?></title>
+    <link rel="Bookmark" href="__ROOT__/favicon.ico" >
+    <link rel="Shortcut Icon" href="__ROOT__/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="__LIB__/html5.js"></script>
+    <script type="text/javascript" src="__LIB__/respond.min.js"></script>
+    <script type="text/javascript" src="__LIB__/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="__LIB__/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="__LIB__/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="__LIB__/icheck/icheck.css"/>
+    
+    <!--[if IE 6]>
+    <script type="text/javascript" src="__LIB__/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <!--定义JavaScript常量-->
+<script>
+    window.THINK_ROOT = '<?php echo \think\Request::instance()->root(); ?>';
+    window.THINK_MODULE = '<?php echo \think\Url::build("/" . \think\Request::instance()->module(), "", false); ?>';
+    window.THINK_CONTROLLER = '<?php echo \think\Url::build("___", "", false); ?>'.replace('/___', '');
+</script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div id="nav-title"></div>
+    <a class="btn btn-success radius r btn-refresh" style="line-height:1.6em;margin-top:3px" href="javascript:;" title="刷新"><i class="Hui-iconfont"></i></a>
+</nav>
+
+
 <div class="page-container">
-    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
-        <input type="hidden" name="id" value="{$vo.id ?? ''}">
+    <form class="form form-horizontal" id="form" method="post" action="<?php echo \think\Request::instance()->baseUrl(); ?>">
+        <input type="hidden" name="id" value="<?php echo isset($vo['id']) ? $vo['id'] :  ''; ?>">
 
          <div class="row cl">
                 <label class="form-label col-xs-3 col-sm-3">公司名称：</label>
@@ -11,11 +55,11 @@
                  <div class="select-box">
                    <select name="comid"  class="select">
                     <option value="0">请选择</option>
-                        {volist name="res" id="vos"}
-                            <option value="{$vos.id}">{$vos.comname}</option>
+                        <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): $i = 0; $__LIST__ = $res;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $vos['id']; ?>"><?php echo $vos['comname']; ?></option>
                             <!-- <option value="1">法商生活区</option>
                             <option value="2">工业职业技术学院</option> -->
-                        {/volist}
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                    </select>
                </div>
 
@@ -26,35 +70,35 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">招聘编号：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="招聘编号" name="advcode" value="{$vo.advcode ?? ''}" >
+                <input type="text" class="input-text" placeholder="招聘编号" name="advcode" value="<?php echo isset($vo['advcode']) ? $vo['advcode'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">职位名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="职位名称" name="advname" value="{$vo.advname ?? ''}" >
+                <input type="text" class="input-text" placeholder="职位名称" name="advname" value="<?php echo isset($vo['advname']) ? $vo['advname'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">薪资待遇：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="薪资待遇" name="advtreatment" value="{$vo.advtreatment ?? ''}" >
+                <input type="text" class="input-text" placeholder="薪资待遇" name="advtreatment" value="<?php echo isset($vo['advtreatment']) ? $vo['advtreatment'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">发布日期：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text Wdate" placeholder="发布日期" name="advpublish" value="{$vo.advpublish ?? ''}" {literal} onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" {/literal} >
+                <input type="text" class="input-text Wdate" placeholder="发布日期" name="advpublish" value="<?php echo isset($vo['advpublish']) ? $vo['advpublish'] :  ''; ?>"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"  >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">工作地点：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="工作地点" name="advaddress" value="{$vo.advaddress ?? ''}" >
+                <input type="text" class="input-text" placeholder="工作地点" name="advaddress" value="<?php echo isset($vo['advaddress']) ? $vo['advaddress'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -75,7 +119,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">工作经验：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="工作经验" name="advexperience" value="{$vo.advexperience ?? ''}" >
+                <input type="text" class="input-text" placeholder="工作经验" name="advexperience" value="<?php echo isset($vo['advexperience']) ? $vo['advexperience'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -97,21 +141,21 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">招聘人数：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="number" class="input-text" placeholder="招聘人数" name="advpeoplenum" value="{$vo.advpeoplenum ?? ''}" >
+                <input type="number" class="input-text" placeholder="招聘人数" name="advpeoplenum" value="<?php echo isset($vo['advpeoplenum']) ? $vo['advpeoplenum'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">职位类别：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="职位类别" name="advcategory" value="{$vo.advcategory ?? ''}" >
+                <input type="text" class="input-text" placeholder="职位类别" name="advcategory" value="<?php echo isset($vo['advcategory']) ? $vo['advcategory'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">岗位职责：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <textarea class="textarea" placeholder="" name="advduty" onKeyUp="textarealength(this, 100)">{$vo.advduty ?? ''}</textarea>
+                <textarea class="textarea" placeholder="" name="advduty" onKeyUp="textarealength(this, 100)"><?php echo isset($vo['advduty']) ? $vo['advduty'] :  ''; ?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
@@ -119,17 +163,17 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">职位月薪：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="职位月薪" name="advsalary" value="{$vo.advsalary ?? ''}" >
+                <input type="text" class="input-text" placeholder="职位月薪" name="advsalary" value="<?php echo isset($vo['advsalary']) ? $vo['advsalary'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         
       
-        {tp:access action="detail"}
+        <?php if (\Rbac::AccessCheck('detail', 'Advertise', 'admin')) : ?>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">是否发布：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <!-- <input type="text" class="input-text" placeholder="是否发布" name="advtfpublish" value="{$vo.advtfpublish ?? ''}" > -->
+                <!-- <input type="text" class="input-text" placeholder="是否发布" name="advtfpublish" value="<?php echo isset($vo['advtfpublish']) ? $vo['advtfpublish'] :  ''; ?>" > -->
                 <select name="advtfpublish" class="select">
                          <option value="0">未审核</option>
                         <option value="1">是</option>
@@ -142,7 +186,7 @@
           <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">是否招聘完成：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <!-- <input type="text" class="input-text" placeholder="是否招聘完成" name="advfinnish" value="{$vo.advfinnish ?? ''}" > -->
+                <!-- <input type="text" class="input-text" placeholder="是否招聘完成" name="advfinnish" value="<?php echo isset($vo['advfinnish']) ? $vo['advfinnish'] :  ''; ?>" > -->
                  <select name="advfinnish" class="select">
                        <option value="0">未审核</option>
                         <option value="1">是</option>
@@ -163,7 +207,7 @@
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
-         {/tp:access}
+         <?php endif; ?>
           
 
         <div class="row cl">
@@ -174,14 +218,20 @@
         </div>
     </form>
 </div>
-{/block}
-{block name="script"}
+
+<script type="text/javascript" src="__LIB__/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__LIB__/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="__STATIC__/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="__STATIC__/js/app.js"></script>
+<script type="text/javascript" src="__LIB__/icheck/jquery.icheck.min.js"></script>
+
 <script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
 <script type="text/javascript" src="__LIB__/My97DatePicker/WdatePicker.js"></script>
 <script>
     $(function () {
-        $("[name='advnature'][value='{$vo.advnature ?? ''}']").prop("checked", true);
-        $("[name='adveducation']").find("[value='{$vo.adveducation ?? ''}']").attr("selected", true);
+        $("[name='advnature'][value='<?php echo isset($vo['advnature']) ? $vo['advnature'] :  ''; ?>']").prop("checked", true);
+        $("[name='adveducation']").find("[value='<?php echo isset($vo['adveducation']) ? $vo['adveducation'] :  ''; ?>']").attr("selected", true);
 
         $('.skin-minimal input').iCheck({
             checkboxClass: 'icheckbox-blue',
@@ -199,4 +249,6 @@
         });
     })
 </script>
-{/block}
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
 <td>{$vo.advcode}</td>
 <td>{$vo.advname}</td>
@@ -10,7 +11,27 @@
 <td>{$vo.advpeoplenum}</td>
 <td>{$vo.advcategory}</td>
 <td>{$vo.advduty}</td>
-<td>{$vo.advsalary}</td>
-<td>{$vo.advfinnish}</td>
-<td>{$vo.advtfpublish}</td>
-<td>{$vo.advexamine}</td> -->
+<td>{$vo.advsalary}</td>-->
+<td>
+	{if condition=" $vo.advfinnish ==0 "}未审核{/if}
+	{if condition=" $vo.advfinnish ==1 "}是{/if} 
+	{if condition=" $vo.advfinnish ==2 "}否{/if}
+</td>
+<td>
+	{if condition=" $vo.advtfpublish ==0 "}未审核{/if}
+	{if condition=" $vo.advtfpublish ==1 "}是{/if} 
+	{if condition=" $vo.advtfpublish ==2 "}否{/if}
+</td>
+<td>
+	{if condition=" $vo.advexamine ==0 "}未审核{/if}
+	{if condition=" $vo.advexamine ==1 "}是{/if} 
+	{if condition=" $vo.advexamine ==2 "}否{/if}
+</td> 
+
+<td>
+
+
+	{if condition=' $vo.comid eq $vio.id '}{$vio.comname}{/if}
+	
+
+</td>

@@ -385,7 +385,7 @@ class Controller
                 return $list;
             } else {
                 // 模板赋值显示
-              
+                
                 $this->view->assign('list', $list);
                 $this->view->assign("count", $list->total());
                 $this->view->assign("page", $list->render());
@@ -401,9 +401,11 @@ class Controller
 
             if ($return) {
                 // 返回值
+
                 return $list;
             } else {
                 // 模板赋值显示
+
                 $this->view->assign('list', $list);
                 $this->view->assign("count", count($list));
                 $this->view->assign("page", '');

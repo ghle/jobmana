@@ -12,10 +12,23 @@
 <td>{$vo.comtaxreg}</td>
 <td>{$vo.commecode}</td>
 <td>{$vo.comhome}</td> -->
-<!-- <td>{$vo.comtfpass}</td>
-<td>{$vo.commissioner}</td>
-<td>{$vo.comlogo}</td>
-<td>{$vo.comthumb}</td>
-<td>{$vo.comtfthumb}</td>
-<td>{$vo.comtfexcellent}</td>
-<td>{$vo.loginid}</td> -->
+<td>
+	{if condition=" $vo.comtfpass ==0 "}未审核{/if}
+	{if condition=" $vo.comtfpass ==1 "}是{/if} 
+	{if condition=" $vo.comtfpass ==2 "}否{/if}
+</td>
+<!-- <td>{$vo.commissioner}</td>
+<td>{$vo.comlogo}</td> -->
+<!-- <td>{$vo.comthumb}</td> -->
+<td>
+	{if condition=" $vo.comtfthumb ==0 "}未审核{/if}
+	{if condition=" $vo.comtfthumb ==1 "}是{/if} 
+	{if condition=" $vo.comtfthumb ==2 "}否{/if}
+
+</td>
+<td>
+	{if condition=" $vo.comtfexcellent ==0 "}未审核{/if}
+	{if condition=" $vo.comtfexcellent ==1 "}是{/if} 
+	{if condition=" $vo.comtfexcellent ==2 "}否{/if}
+</td>
+<!-- <td>{$vo.loginid}</td> -->
