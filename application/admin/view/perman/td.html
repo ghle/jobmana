@@ -2,10 +2,10 @@
 <td>{$vo.identifier}</td>
 <td>{$vo.number}</td>
 <td>{$vo.fullname}</td>
-<td>{$vo.sex}</td>
+<td>{if condition=" $vo.sex ==0 "}男 {else/} 女 {/if} </td>
 <td>{$vo.address}</td>
 <td>{$vo.telphone}</td>
-<td>{$vo.email}</td>
+<!-- <td>{$vo.email}</td>
 <td>{$vo.education}</td>
 <td>{$vo.thumb}</td>
 <td>{$vo.school}</td>
@@ -15,4 +15,4 @@
 <td>{$vo.entrytime}</td>
 <td>{$vo.graduateyear}</td>
 <td>{$vo.stustatus}</td>
-<td>{$vo.loginnum}</td>
+<td>{$vo.loginnum}</td> -->

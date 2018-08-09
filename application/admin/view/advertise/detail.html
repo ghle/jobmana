@@ -1,0 +1,127 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <div class="form form-horizontal">
+ <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">招聘编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.advcode}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">职位名称：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advname}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">薪资待遇：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advtreatment}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">发布日期：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advpublish}
+
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">工作地点：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advaddress}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">工作性质：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+                {if condition=" $vo.advnature==1"}全职
+                {else/}兼职
+                {/if}   
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">工作经验：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advexperience}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学历要求：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                  {switch name="$vo.adveducation" }
+                    {case value="0"}高中{/case}
+                    {case value="1"}专科{/case}
+                    {case value="2"}本科{/case}
+                    {case value="3"}研究生{/case}
+                    {case value="4"}不限{/case}
+                {/switch}
+               
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">招聘人数：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advpeoplenum}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">职位类别：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advcategory}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">岗位职责：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              <!--   <textarea class="textarea" placeholder="" name="advduty" onKeyUp="textarealength(this, 100)">{$vo.advduty ?? ''}</textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+                 -->
+                 {$vo.advduty}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">职位月薪：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advsalary}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否招聘完成：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advfinnish}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否发布：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.advtfpublish}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否审核通过：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.advexamine}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+    </div>
+</div>
+{/block}

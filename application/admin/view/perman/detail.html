@@ -1,0 +1,126 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <div class="form form-horizontal">
+ <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学生编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.identifier}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.number}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">姓名：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.fullname}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">性别：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+                  {if condition=" $vo.sex ==0 "}男 {else/} 女 {/if} 
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">联系地址：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.address}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">联系电话：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.telphone}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">邮箱：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.email}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学历：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.education}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">图片：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.thumb}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.school}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">所在院系：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.department}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              {$vo.class}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">所在专业：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              {$vo.major}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">入学年份：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.entrytime}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">毕业年份：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.graduateyear}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">状态：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+                  {if condition=" $vo.stustatus == 1 "}在职{else/}求职{/if}      
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">登录用户编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              {$vo.loginnum}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+    </div>
+</div>
+{/block}
