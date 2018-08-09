@@ -9,14 +9,29 @@
                 <div class="formControls col-xs-6 col-sm-6">
 
                  <div class="select-box">
-                   <select name="comid"  class="select">
-                    <option value="0">请选择</option>
-                        {volist name="res" id="vos"}
-                            <option value="{$vos.id}">{$vos.comname}</option>
-                            <!-- <option value="1">法商生活区</option>
-                            <option value="2">工业职业技术学院</option> -->
-                        {/volist}
-                   </select>
+                     {if condition=" $vo eq '' "}
+                     <select name="comid"  class="select"> 
+                             <option value="0" selected>请选择</option>
+                            {volist name="res" id="vos"}
+                                
+                                <option value="{$vos.id}">{$vos.comname}</option>
+                               
+                            {/volist}
+                     </select>
+                      {/if}
+
+                        {if condition=" $vo neq '' "}
+                          
+                        <select name="comid"  class="select"> 
+                             <option value="0" selected>请选择</option>
+                            {volist name="res" id="vos"}
+                                {if condition=" $vos.id eq $vo.comid "}
+                                <option value="{$vos.id}" selected>{$vos.comname}</option>
+                                {/if}
+                            {/volist}
+                        </select>
+                          {/if}
+    
                </div>
 
                 </div>
@@ -62,11 +77,11 @@
             <label class="form-label col-xs-3 col-sm-3">工作性质：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <input type="radio" name="advnature" id="advnature-" value="0" checked>
                     <label for="advnature-">全职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <input type="radio" name="advnature" id="advnature-" value="1">
                     <label for="advnature-">兼职</label>
                 </div>
             </div>
@@ -84,6 +99,7 @@
             <div class="formControls col-xs-6 col-sm-6">
                 <div class="select-box">
                     <select name="adveducation" class="select">
+
                         <option value="0">高中</option>
                         <option value="1">专科</option>
                         <option value="2">本科</option>

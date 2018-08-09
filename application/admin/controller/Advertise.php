@@ -4,6 +4,10 @@ namespace app\admin\controller;
 \think\Loader::import('controller/Controller', \think\Config::get('traits_path') , EXT);
 
 use app\admin\Controller;
+use think\Db;
+use think\Loader;
+use think\exception\HttpException;
+use think\Config;
 
 class Advertise extends Controller
 {
@@ -126,6 +130,8 @@ class Advertise extends Controller
             $res=db('companyman')->field('comname,id')->where('comtfpass',1)->select();
 
             $this->view->assign('res',$res);
+   
+             $this->view->assign("vo", '');
 
             return $this->view->fetch(isset($this->template) ? $this->template : 'edit');
         }
@@ -194,6 +200,7 @@ class Advertise extends Controller
             $res=db('companyman')->field('comname,id')->where('comtfpass',1)->select();
 
             $this->view->assign('res',$res);
+
 
             $this->view->assign("vo", $vo);
 

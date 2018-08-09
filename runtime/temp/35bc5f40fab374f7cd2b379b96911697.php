@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\edit.html";i:1533822290;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\edit.html";i:1533825884;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -53,14 +53,25 @@
                 <div class="formControls col-xs-6 col-sm-6">
 
                  <div class="select-box">
-                   <select name="comid"  class="select">
-                    <option value="0">请选择</option>
-                        <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): $i = 0; $__LIST__ = $res;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;?>
-                            <option value="<?php echo $vos['id']; ?>"><?php echo $vos['comname']; ?></option>
-                            <!-- <option value="1">法商生活区</option>
-                            <option value="2">工业职业技术学院</option> -->
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                   </select>
+                     <?php if($vo == ''): ?>
+                     <select name="comid"  class="select"> 
+                             <option value="0" selected>请选择</option>
+                            <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): $i = 0; $__LIST__ = $res;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;?>
+                                
+                                <option value="<?php echo $vos['id']; ?>"><?php echo $vos['comname']; ?></option>
+                               
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                     </select>
+                      <?php endif; if($vo != ''): ?>
+                          
+                        <select name="comid"  class="select"> 
+                             <option value="0" selected>请选择</option>
+                            <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): $i = 0; $__LIST__ = $res;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;if($vos['id'] == $vo['comid']): ?>
+                                <option value="<?php echo $vos['id']; ?>" selected><?php echo $vos['comname']; ?></option>
+                                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                          <?php endif; ?>
+    
                </div>
 
                 </div>
@@ -106,11 +117,11 @@
             <label class="form-label col-xs-3 col-sm-3">工作性质：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <input type="radio" name="advnature" id="advnature-" value="0" checked>
                     <label for="advnature-">全职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="advnature" id="advnature-" value="">
+                    <input type="radio" name="advnature" id="advnature-" value="1">
                     <label for="advnature-">兼职</label>
                 </div>
             </div>
@@ -128,6 +139,7 @@
             <div class="formControls col-xs-6 col-sm-6">
                 <div class="select-box">
                     <select name="adveducation" class="select">
+
                         <option value="0">高中</option>
                         <option value="1">专科</option>
                         <option value="2">本科</option>
