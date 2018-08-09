@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:78:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\index.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\form.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\th.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\td.html";i:1533730692;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:78:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\index.html";i:1533788020;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\form.html";i:1533730692;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\th.html";i:1533787582;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\td.html";i:1533788218;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -63,21 +63,21 @@
 <th width="">地址</th>
 <th width="">联系人</th>
 <th width="">联系电话</th>
-<th width="">企业简介</th>
+<!-- <th width="">企业简介</th>
 <th width="">企业性质</th>
 <th width="">所属行业</th>
 <th width="">企业规模</th>
 <th width="">营业执照</th>
 <th width="">税务登记证</th>
-<th width="">机构代码</th>
-<th width="">公司主页</th>
-<th width="">是否审核通过</th>
-<th width="">就业专员</th>
+<th width="">机构代码</th> -->
+<!-- <th width="">公司主页</th> -->
+<!-- <th width="">是否审核通过</th> -->
+<!-- <th width="">就业专员</th>
 <th width="">企业logo</th>
-<th width="">企业照片</th>
-<th width="">是否展示照片</th>
-<th width="">是否优秀企业</th>
-<th width="">登录用户编号</th>
+<th width="">企业照片</th> -->
+<!-- <th width="">是否展示照片</th>
+<th width="">是否优秀企业</th> -->
+<!-- <th width="">登录用户编号</th> -->
             <th width="70">操作</th>
         </tr>
         </thead>
@@ -88,24 +88,28 @@
 <td><?php echo $vo['comcode']; ?></td>
 <td><?php echo $vo['comname']; ?></td>
 <td><?php echo $vo['comadress']; ?></td>
-<td><?php echo $vo['comname']; ?></td>
+<td><?php echo $vo['compeople']; ?></td>
 <td><?php echo $vo['comtelphone']; ?></td>
-<td><?php echo $vo['comdesc']; ?></td>
+<!--<td><?php echo $vo['comdesc']; ?></td>
 <td><?php echo $vo['comqua']; ?></td>
 <td><?php echo $vo['comcategory']; ?></td>
 <td><?php echo $vo['comscale']; ?></td>
 <td><?php echo $vo['comlicense']; ?></td>
 <td><?php echo $vo['comtaxreg']; ?></td>
 <td><?php echo $vo['commecode']; ?></td>
-<td><?php echo $vo['comhome']; ?></td>
-<td><?php echo $vo['comtfpass']; ?></td>
+<td><?php echo $vo['comhome']; ?></td> -->
+<!-- <td><?php echo $vo['comtfpass']; ?></td>
 <td><?php echo $vo['commissioner']; ?></td>
 <td><?php echo $vo['comlogo']; ?></td>
 <td><?php echo $vo['comthumb']; ?></td>
 <td><?php echo $vo['comtfthumb']; ?></td>
 <td><?php echo $vo['comtfexcellent']; ?></td>
-<td><?php echo $vo['loginid']; ?></td>
+<td><?php echo $vo['loginid']; ?></td> -->
+
             <td class="f-14">
+                <?php if (\Rbac::AccessCheck('detail', 'Companyman', 'admin')) : ?>
+                    <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','<?php echo \think\Url::build('detail', ['id'=>$vo['id']]); ?>')">详情</a>
+                <?php endif; ?>
                 <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
             </td>
         </tr>

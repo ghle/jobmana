@@ -1,0 +1,172 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <div class="form form-horizontal">
+
+           <div class="row cl">
+                <label class="form-label col-xs-3 col-sm-3">企业编号</label>
+                <div class="formControls col-xs-6 col-sm-6">
+                    {$vo.comcode}
+                </div>
+                <div class="col-xs-3 col-sm-3"></div>
+            </div>
+
+            <div class="row cl">
+                <label class="form-label col-xs-3 col-sm-3">企业名称</label>
+                <div class="formControls col-xs-6 col-sm-6">
+                    {$vo.comname}
+                </div>
+                <div class="col-xs-3 col-sm-3"></div>
+            </div>
+
+            <div class="row cl">
+                <label class="form-label col-xs-3 col-sm-3">联系地址</label>
+                <div class="formControls col-xs-6 col-sm-6">
+                    {$vo.comadress}
+                </div>
+                <div class="col-xs-3 col-sm-3"></div>
+            </div>
+
+            <div class="row cl">
+                <label class="form-label col-xs-3 col-sm-3">联系方式</label>
+                <div class="formControls col-xs-6 col-sm-6">
+                    {$vo.comtelphone}
+                </div>
+                <div class="col-xs-3 col-sm-3"></div>
+            </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">联系人</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.compeople}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">企业简介</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.comdesc}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">企业性质：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {switch name="$vo.comqua" }
+                    {case value="0"}国营{/case}
+                    {case value="1"}集体{/case}
+                    {case value="2"}私营{/case}
+                    {case value="3"}外资{/case}
+                {/switch}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">所属行业：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.comcategory}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">企业规模：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               {$vo.comscale}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">营业执照：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.comlicense}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">税务登记证：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+            {$vo.comtaxreg}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">机构代码：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+           {$vo.commecode}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">公司主页：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+            {$vo.comhome}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否审核通过：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              
+                 {if condition=" $vo.comtfexcellent == 1 "}是
+                   {else/}
+                   否
+                   {/if}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">就业专员：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              {$vo.commissioner}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">企业logo：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.comlogo}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">企业照片：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              {$vo.comthumb}
+                
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否展示照片：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {if condition=" $vo.comtfexcellent == 1 "}是
+                   {else/}
+                   否
+                {/if}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">是否优秀企业：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               
+                   {if condition=" $vo.comtfexcellent == 1 "}是
+                   {else/}
+                   否
+                   {/if}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">登录用户编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                {$vo.loginid}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\edit.html";i:1533734726;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\edit.html";i:1533788264;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -71,7 +71,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">联系人：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="联系人" name="comname" value="<?php echo isset($vo['comname']) ? $vo['comname'] :  ''; ?>" >
+                <input type="text" class="input-text" placeholder="联系人" name="compeople" value="<?php echo isset($vo['compeople']) ? $vo['compeople'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
