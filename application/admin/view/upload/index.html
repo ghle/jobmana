@@ -89,6 +89,7 @@
             },
             done: function (e, data) {
                 layer.close(layer_msg);
+                console.log(data);
                 callback(callbackId,data.result.data.name);
             }
         });

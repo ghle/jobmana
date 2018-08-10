@@ -20,20 +20,27 @@
         <tbody>
         {volist name="list" id="vo"}
         <tr class="text-c"> 
-         {volist name='res' id='vio'} 
-            {include file="td" /}
+          {volist name='res' id='vio'} 
+                    {if condition=' $vo.comid eq $vio.id '}
+        {include file="td" /}
+
+         
+                            <td>
+                                {$vio.comname} 
+                            </td> 
+                    
+              
+                            <td class="f-14">
+                                {tp:access action="detail"}
+                                    <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','{:\\think\\Url::build(\'detail\', [\'id\'=>$vo[\'id\']])}')">详情</a>
+                                {/tp:access}
+                                {$vo.status|show_status=$vo.id}
+                                {tp:menu menu='sedit' /}
+                                {tp:menu menu='sdelete' /}
+                            </td>
+                    {/if} 
+                {/volist}
           
-                {if condition='$vio.comtfpass eq 1'}
-                    <td class="f-14">
-                        {tp:access action="detail"}
-                            <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','{:\\think\\Url::build(\'detail\', [\'id\'=>$vo[\'id\']])}')">详情</a>
-                        {/tp:access}
-                        {$vo.status|show_status=$vo.id}
-                        {tp:menu menu='sedit' /}
-                        {tp:menu menu='sdelete' /}
-                    </td>
-                {/if}
-            {/volist}
         </tr>
         {/volist}
         </tbody>

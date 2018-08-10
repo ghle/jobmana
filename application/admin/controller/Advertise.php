@@ -66,10 +66,11 @@ class Advertise extends Controller
 
         $this->datalist($model, $map);
 
-        $field='comname,id,comtfpass';
+        $field='comname,id';
         // $res=db('companyman')->alias('com')->join('Advertise adv','adv.comid=com.id')->field($field)->where(['adv.status'=>1,'adv.isdelete'=>0])->select();
-        $res=db('companyman')->field($field)->where(['status'=>1,'isdelete'=>0])->select();
+        $res=db('companyman')->field($field)->where(['status'=>1,'isdelete'=>0,'comtfpass'=>1])->select();
         
+  
         $this->view->assign('res',$res);
     
         return $this->view->fetch();

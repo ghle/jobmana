@@ -41,7 +41,9 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">企业简介：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="企业简介" name="comdesc" value="{$vo.comdesc ?? ''}" >
+               <!--  <input type="text" class="input-text" placeholder="企业简介" name="comdesc" value="{$vo.comdesc ?? ''}" > -->
+            <textarea class="textarea" placeholder="企业简介" name="comdesc" onKeyUp="textarealength(this, 100)">{$vo.comdesc ?? ''}</textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -77,14 +79,20 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">营业执照：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="营业执照" name="comlicense" value="{$vo.comlicense ?? ''}" >
+                <!-- <input type="text" class="input-text" placeholder="营业执照" name="comlicense" value="{$vo.comlicense ?? ''}" > -->
+                 <input type="text" class="input-text" id="comlicense" name="comlicense" value="{$vo.comlicense ?? ''}" placeholder="营业执照" style="width: 70%">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','{:\\think\\Url::build(\'Upload/index\', [\'id\' => \'comlicense\'])}')">上传</button>
+             <a onclick="$(this).attr('href', $('#comlicense').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">税务登记证：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="税务登记证" name="comtaxreg" value="{$vo.comtaxreg ?? ''}" >
+                <!-- <input type="text" class="input-text" placeholder="税务登记证" name="comtaxreg" value="{$vo.comtaxreg ?? ''}" > -->
+                  <input type="text" class="input-text" id="comtaxreg"  placeholder="税务登记证" name="comtaxreg" value="{$vo.comtaxreg ?? ''}"  style="width: 70%">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','{:\\think\\Url::build(\'Upload/index\', [\'id\' => \'comtaxreg\'])}')">上传</button>
+             <a onclick="$(this).attr('href', $('#comtaxreg').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -113,15 +121,26 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">企业logo：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="企业logo" name="comlogo" value="{$vo.comlogo ?? ''}" >
+                <!-- <input type="text" class="input-text" placeholder="企业logo" name="comlogo" value="{$vo.comlogo ?? ''}" > -->
+
+                <input type="text" class="input-text" id="comlogo" name="comlogo" value="{$vo.comlogo ?? ''}" placeholder="企业logo" style="width: 70%">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','{:\\think\\Url::build(\'Upload/index\', [\'id\' => \'comlogo\'])}')">上传</button>
+              <a onclick="$(this).attr('href', $('#comlogo').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
+
+           
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
+
+
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">企业照片：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="企业照片" name="comthumb" value="{$vo.comthumb ?? ''}" >
-                
+                <!-- <input type="text" class="input-text" placeholder="企业照片" name="comthumb" value="{$vo.comthumb ?? ''}" > -->
+                 <input type="text" class="input-text" id="comthumb" name="comthumb" placeholder="企业照片"  style="width: 70%" value="{$vo.comthumb ?? ''}">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','{:\\think\\Url::build(\'Upload/index\', [\'id\' => \'comthumb\'])}')">上传</button>
+               <a onclick="$(this).attr('href', $('#comthumb').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
+           
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
