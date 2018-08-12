@@ -15411,3 +15411,289 @@
 [ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/advertise/recyclebin.html' , 'admin' , 'Advertise' , 'recyclebin' , 'GET' , 'a:0:{}' , 1534071957) [ RunTime:0.000500s ]
 
 ---------------------------------------------------------------
+[ 2018-08-12T19:17:44+08:00 ] ::1 ::1 GET /jobmana/public/admin/companyman/index.html
+[ log ] localhost:81/jobmana/public/admin/companyman/index.html [运行时间：0.884112s][吞吐率：1.13req/s] [内存消耗：5,509.68kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'companyman',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.057507s ]
+[ info ] [ RUN ] app\admin\controller\Companyman->index[ E:\phpstudy\WWW\jobmana\application\admin\traits\controller\Controller.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'page',
+  3 => 'numPerPage',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.016502s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_companyman` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_companyman` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_companyman` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/companyman/index.html' , 'admin' , 'Companyman' , 'index' , 'GET' , 'a:0:{}' , 1534072663) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T19:17:47+08:00 ] ::1 ::1 GET /jobmana/public/admin/companyman/detail/id/1.html
+[ log ] localhost:81/jobmana/public/admin/companyman/detail/id/1.html [运行时间：1.724719s][吞吐率：0.58req/s] [内存消耗：5,617.82kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'companyman',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/companyman/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.043005s ]
+[ info ] [ RUN ] app\admin\controller\Companyman->detail[ E:\phpstudy\WWW\jobmana\application\admin\controller\Companyman.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\detail.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.027503s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015502s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_companyman` [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT `w`.* FROM `tp_companyman` `w` WHERE  `w`.`id` = '1' LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.022503s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/companyman/detail/id/1.html' , 'admin' , 'Companyman' , 'detail' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"1\";}' , 1534072666) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T19:17:48+08:00 ] ::1 ::1 GET /jobmana/public/admin/companyman/detail/id/1
+[ log ] localhost:81/jobmana/public/admin/companyman/detail/id/1 [运行时间：1.050133s][吞吐率：0.95req/s] [内存消耗：5,396.84kb] [文件加载：73]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'companyman',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/companyman/detail/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.064008s ]
+[ info ] [ RUN ] app\admin\controller\Companyman->detail[ E:\phpstudy\WWW\jobmana\application\admin\controller\Companyman.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\detail.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.023003s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016502s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_companyman` [ RunTime:0.016503s ]
+[ sql ] [ SQL ] SELECT `w`.* FROM `tp_companyman` `w` WHERE  `w`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/companyman/detail/id/1' , 'admin' , 'Companyman' , 'detail' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"1\";}' , 1534072668) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T19:17:49+08:00 ] ::1 ::1 GET /jobmana/public/admin/companyman/detail/id/9153011232522488898
+[ log ] localhost:81/jobmana/public/admin/companyman/detail/id/9153011232522488898 [运行时间：1.534695s][吞吐率：0.65req/s] [内存消耗：5,390.93kb] [文件加载：73]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'companyman',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/companyman/detail/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+  'id' => '9153011232522488898',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.664084s ]
+[ info ] [ RUN ] app\admin\controller\Companyman->detail[ E:\phpstudy\WWW\jobmana\application\admin\controller\Companyman.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\detail.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.015502s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005500s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_companyman` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `w`.* FROM `tp_companyman` `w` WHERE  `w`.`id` = '9153011232522488898' LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.012002s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/companyman/detail/id/9153011232522488898' , 'admin' , 'Companyman' , 'detail' , 'GET' , 'a:1:{s:2:\"id\";s:19:\"9153011232522488898\";}' , 1534072669) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T19:17:58+08:00 ] ::1 ::1 GET /jobmana/public/admin/companyman/edit/id/1.html
+[ log ] localhost:81/jobmana/public/admin/companyman/edit/id/1.html [运行时间：1.055134s][吞吐率：0.95req/s] [内存消耗：5,644.59kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'companyman',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/companyman/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.040005s ]
+[ info ] [ RUN ] app\admin\controller\Companyman->edit[ E:\phpstudy\WWW\jobmana\application\admin\traits\controller\Controller.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\companyman\edit.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.015502s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016002s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_companyman` [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_companyman` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/companyman/edit/id/1.html' , 'admin' , 'Companyman' , 'edit' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"1\";}' , 1534072677) [ RunTime:0.000501s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T19:18:06+08:00 ] ::1 ::1 GET /jobmana/public/admin/upload/index/id/comthumb.html
+[ log ] localhost:81/jobmana/public/admin/upload/index/id/comthumb.html [运行时间：0.776599s][吞吐率：1.29req/s] [内存消耗：5,073.78kb] [文件加载：70]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'upload',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/companyman/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g5s4gu34en5262iu2qknvtic55',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'comthumb',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.047506s ]
+[ info ] [ RUN ] app\admin\controller\Upload->index[ E:\phpstudy\WWW\jobmana\application\admin\controller\Upload.php ]
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\upload\index.html [ array (
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.116015s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004501s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.035504s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/upload/index/id/comthumb.html' , 'admin' , 'Upload' , 'index' , 'GET' , 'a:1:{s:2:\"id\";s:8:\"comthumb\";}' , 1534072686) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
