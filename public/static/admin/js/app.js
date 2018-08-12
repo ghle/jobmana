@@ -238,6 +238,7 @@ function ajax_req(url, data, callback, param, shade) {
  * @param param 回调参数
  */
 function ajax_progress(data, callback, param) {
+       
     if (data.code == 0) {
         if (typeof data.opt == "object") {
             var index = parent.layer.getFrameIndex(window.name);

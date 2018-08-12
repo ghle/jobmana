@@ -131,7 +131,7 @@ function getUserTags() {
 //
 
 //单推接口案例
-function pushMessageToSingle($cid){
+function pushMessageToSingle($cid,$title,$content){
     //$igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
     $igt = new \IGeTui(NULL,APPKEY,MASTERSECRET,false);
 
@@ -142,7 +142,7 @@ function pushMessageToSingle($cid){
     // 4.NotyPopLoadTemplate：通知弹框下载功能模板
 
 //    	$template = IGtNotyPopLoadTemplateDemo();
-   	$template = $this->IGtLinkTemplateDemo();
+   	$template = $this->IGtLinkTemplateDemo($title,$content);
    	// $template = IGtNotificationTemplateDemo();
     // $template = IGtTransmissionTemplateDemo(); 
 
@@ -164,8 +164,9 @@ function pushMessageToSingle($cid){
 
     try {
         $rep = $igt->pushMessageToSingle($message, $target);
-        var_dump($rep);
-        echo ("<br><br>");
+
+        return true;
+        // echo ("<br><br>");
 
     }catch(RequestException $e){
         $requstId =e.getRequestId();
@@ -340,12 +341,12 @@ function IGtNotyPopLoadTemplateDemo(){
     return $template;
 }
 
-function IGtLinkTemplateDemo(){
+function IGtLinkTemplateDemo($title,$content){
     $template =  new \IGtLinkTemplate();
     $template ->set_appId(APPID);//应用appid
     $template ->set_appkey(APPKEY);//应用appkey
-    $template ->set_title("职位名称");//通知栏标题
-    $template ->set_text("详细内容");//通知栏内容
+    $template ->set_title($title);//通知栏标题
+    $template ->set_text($content);//通知栏内容
     $template ->set_logo("");//通知栏logo
     $template ->set_isRing(true);//是否响铃
     $template ->set_isVibrate(true);//是否震动

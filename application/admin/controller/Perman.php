@@ -11,9 +11,39 @@ class Perman extends Controller
     // 方法黑名单
     protected static $blacklist = [];
 
+    /**
+     * 首页
+     * @return mixed
+     */
+    public function index()
+    {
+        $model = $this->getModel();
+
+        // 列表过滤器，生成查询Map对象
+        $map = $this->search($model, [$this->fieldIsDelete => $this::$isdelete]);
+
+        // 特殊过滤器，后缀是方法名的
+        $actionFilter = 'filter' . $this->request->action();
+        if (method_exists($this, $actionFilter)) {
+            $this->$actionFilter($map);
+        }
+
+        // 自定义过滤器
+        if (method_exists($this, 'filter')) {
+            $this->filter($map);
+        }
+
+        $this->datalist($model, $map);
+
+        $school= db('departman')->select();
+
+        $this->view->assign('school',$school);
+
+        return $this->view->fetch();
+    }
     
      /**
-     * 详情
+     * 查看详情
      */
     public function detail()
     {
@@ -38,20 +68,37 @@ class Perman extends Controller
 
         return $this->view->fetch();
     }
-
+    /**********发送通知************/
      public function publish()
     {
-        $hashids = new \getui\Demo(); 
-         // $hashids->pushMessageToApp();
         $id = $this->request->param('id');
+
+        if ($this->request->isPost()) {
+            
+            $params= $this->request->param();
+         
+            if ($params['advname']==0 && $params['advduty']=='') {
+                return ajax_return_adv_error('职位名称 职位描述不能为空');
+            }
+            if ($params['id']=='') {
+               return ajax_return_adv_error('基础参数缺失');
+            }
+
+            $hashids = new \getui\Demo();
+             
+            $res=db('Perman')->field('number')->where('id',$id)->find();
+
+            $var=$hashids->pushMessageToSingle($res['number'],$params['advname'],$params['advduty']);
+
+            return ajax_return_adv('发送成功');
+
+        }
+
         if (!$id) {
             throw new Exception('缺少必要参数ID');
         }
-        // $res=db('Perman')->where('id',$id)->find();
-        // dump($res);die;//number
-        // $hashids->pushMessageToSingle($res['number']);
-
-        $res=db('advertise')->field('advname,advduty,id')->where('id',$id)->select();
+        
+        $res=db('advertise')->field('advname,advduty,id')->select();
         
         $this->view->assign('vo',$res);
 

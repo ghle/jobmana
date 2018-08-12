@@ -1,11 +1,11 @@
 <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
 <td>{$vo.identifier}</td>
-<td>{$vo.number}</td>
+<!-- <td>{$vo.number}</td> -->
 <td>{$vo.fullname}</td>
-<td>{if condition=" $vo.sex ==0 "}男 {else/} 女 {/if} </td>
+<!-- <td>{if condition=" $vo.sex ==0 "}男 {else/} 女 {/if} </td>
 <td>{$vo.address}</td>
 <td>{$vo.telphone}</td>
-<!-- <td>{$vo.email}</td>
+<td>{$vo.email}</td>
 <td>{$vo.education}</td>
 <td>{$vo.thumb}</td>
 <td>{$vo.school}</td>
@@ -13,6 +13,8 @@
 <td>{$vo.class}</td>
 <td>{$vo.major}</td>
 <td>{$vo.entrytime}</td>
-<td>{$vo.graduateyear}</td>
-<td>{$vo.stustatus}</td>
-<td>{$vo.loginnum}</td> -->
+<td>{$vo.graduateyear}</td> -->
+<td>{$vos.classname}</td>
+<td>{if condition=" $vo.stustatus ==0 "}求职 {else/} 在职 {/if}</td>
+
+<!-- <td>{$vo.loginnum}</td> -->
