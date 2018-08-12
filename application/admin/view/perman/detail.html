@@ -61,14 +61,17 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">图片：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                {$vo.thumb}
+                <img src="{$vo.thumb}" width="200px;" height="300px;">
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                {$vo.school}
+                 {volist name="school" id="sch"}
+                    {if condition="$sch.schoolnum eq $vo.school"}{$sch.schoolname}{/if}
+                {/volist}
+ 
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -82,7 +85,9 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
             <div class="formControls col-xs-6 col-sm-6">
-              {$vo.class}
+              {volist name="class" id="cla"}
+                {if condition="$cla.classnum eq $vo.class"}{$cla.classname}{/if}
+              {/volist}
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>

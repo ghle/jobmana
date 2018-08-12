@@ -69,14 +69,36 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">图片：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="图片" name="thumb" value="{$vo.thumb ?? ''}" >
+                <!-- <input type="text" class="input-text" placeholder="图片" name="thumb" value="{$vo.thumb ?? ''}" > -->
+             <input type="text" class="input-text" id="thumb" name="thumb" value="{$vo.thumb ?? ''}" placeholder="图片" style="width: 70%">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','{:\\think\\Url::build(\'Upload/index\', [\'id\' => \'thumb\'])}')">上传</button>
+             <a onclick="$(this).attr('href', $('#thumb').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在学校" name="school" value="{$vo.school ?? ''}" >
+               <!--  <input type="text" class="input-text" placeholder="所在学校" name="school" value="{$vo.school ?? ''}" > -->
+                <select name="school" class="select">
+                    <option value="0">请选择</option>
+
+                 {if condition ="$edit eq 'edit' "}
+                    {volist name='school' id='sch'}
+                        {if condition ="$sch.schoolnum eq $vo.school"}
+                        <option value="{$sch.schoolnum}" selected="true">{$sch.schoolname}</option>
+                        {else/}
+                        <option value="{$sch.schoolnum}">{$sch.schoolname}</option>
+                        {/if}
+                    {/volist}
+                {/if}
+                
+                {if condition ="$edit eq 'add' "}
+                        {volist name='school' id='sch'}
+                            <option value="{$sch.schoolnum}">{$sch.schoolname}</option>
+                        {/volist}
+                {/if}
+                </select>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -84,13 +106,37 @@
             <label class="form-label col-xs-3 col-sm-3">所在院系：</label>
             <div class="formControls col-xs-6 col-sm-6">
                 <input type="text" class="input-text" placeholder="所在院系" name="department" value="{$vo.department ?? ''}" >
+
+               
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在班级" name="class" value="{$vo.class ?? ''}" >
+
+                <select name="class" class="select">
+                    <option value="0">请选择</option>
+               <!-- 修改 -->
+                {if condition ="$edit eq 'edit' "}
+                    {volist name='class' id='cla'}
+                        {if condition ="$cla.classnum eq $vo.class"}
+                            <option value="{$cla.classnum}" selected>{$cla.classname}</option>
+                        {else/}
+                            <option value="{$cla.classnum}">{$cla.classname}</option>
+                        {/if}
+                    {/volist}
+                {/if}
+                <!-- 添加 -->
+                {if condition ="$edit eq 'add' "}
+                    {volist name='class' id='cla'} 
+                            <option value="{$cla.classnum}">{$cla.classname}</option>
+                    {/volist}
+                {/if}
+                
+
+                </select>
+
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -119,11 +165,11 @@
             <label class="form-label col-xs-3 col-sm-3">状态：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="0" checked="true">
+                    <input type="radio" name="stustatus" id="stustatus-" value="1" checked="true">
                     <label for="stustatus-">在职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="1">
+                    <input type="radio" name="stustatus" id="stustatus-" value="0">
                     <label for="stustatus-">求职</label>
                 </div>
             </div>

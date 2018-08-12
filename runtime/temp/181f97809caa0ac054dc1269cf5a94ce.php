@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\edit.html";i:1533801026;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\edit.html";i:1534070886;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -113,14 +113,28 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">图片：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="图片" name="thumb" value="<?php echo isset($vo['thumb']) ? $vo['thumb'] :  ''; ?>" >
+                <!-- <input type="text" class="input-text" placeholder="图片" name="thumb" value="<?php echo isset($vo['thumb']) ? $vo['thumb'] :  ''; ?>" > -->
+             <input type="text" class="input-text" id="thumb" name="thumb" value="<?php echo isset($vo['thumb']) ? $vo['thumb'] :  ''; ?>" placeholder="图片" style="width: 70%">
+            <button type="button" class="btn btn-primary radius" onclick="layer_open('文件上传','<?php echo \think\Url::build('Upload/index', ['id' => 'thumb']); ?>')">上传</button>
+             <a onclick="$(this).attr('href', $('#thumb').val())" type="button" class="btn btn-success radius" data-lightbox="preview">预览</a>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在学校" name="school" value="<?php echo isset($vo['school']) ? $vo['school'] :  ''; ?>" >
+               <!--  <input type="text" class="input-text" placeholder="所在学校" name="school" value="<?php echo isset($vo['school']) ? $vo['school'] :  ''; ?>" > -->
+                <select name="school" class="select">
+                    <option value="0">请选择</option>
+
+                 <?php if($edit == 'edit'): if(is_array($school) || $school instanceof \think\Collection || $school instanceof \think\Paginator): $i = 0; $__LIST__ = $school;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sch): $mod = ($i % 2 );++$i;if($sch['schoolnum'] == $vo['school']): ?>
+                        <option value="<?php echo $sch['schoolnum']; ?>" selected="true"><?php echo $sch['schoolname']; ?></option>
+                        <?php else: ?>
+                        <option value="<?php echo $sch['schoolnum']; ?>"><?php echo $sch['schoolname']; ?></option>
+                        <?php endif; endforeach; endif; else: echo "" ;endif; endif; if($edit == 'add'): if(is_array($school) || $school instanceof \think\Collection || $school instanceof \think\Paginator): $i = 0; $__LIST__ = $school;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sch): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $sch['schoolnum']; ?>"><?php echo $sch['schoolname']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                </select>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -128,13 +142,31 @@
             <label class="form-label col-xs-3 col-sm-3">所在院系：</label>
             <div class="formControls col-xs-6 col-sm-6">
                 <input type="text" class="input-text" placeholder="所在院系" name="department" value="<?php echo isset($vo['department']) ? $vo['department'] :  ''; ?>" >
+
+               
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="所在班级" name="class" value="<?php echo isset($vo['class']) ? $vo['class'] :  ''; ?>" >
+
+                <select name="class" class="select">
+                    <option value="0">请选择</option>
+               <!-- 修改 -->
+                <?php if($edit == 'edit'): if(is_array($class) || $class instanceof \think\Collection || $class instanceof \think\Paginator): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cla): $mod = ($i % 2 );++$i;if($cla['classnum'] == $vo['class']): ?>
+                            <option value="<?php echo $cla['classnum']; ?>" selected><?php echo $cla['classname']; ?></option>
+                        <?php else: ?>
+                            <option value="<?php echo $cla['classnum']; ?>"><?php echo $cla['classname']; ?></option>
+                        <?php endif; endforeach; endif; else: echo "" ;endif; endif; ?>
+                <!-- 添加 -->
+                <?php if($edit == 'add'): if(is_array($class) || $class instanceof \think\Collection || $class instanceof \think\Paginator): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cla): $mod = ($i % 2 );++$i;?> 
+                            <option value="<?php echo $cla['classnum']; ?>"><?php echo $cla['classname']; ?></option>
+                    <?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                
+
+                </select>
+
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -163,11 +195,11 @@
             <label class="form-label col-xs-3 col-sm-3">状态：</label>
             <div class="formControls col-xs-6 col-sm-6 skin-minimal">
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="0" checked="true">
+                    <input type="radio" name="stustatus" id="stustatus-" value="1" checked="true">
                     <label for="stustatus-">在职</label>
                 </div>
                 <div class="radio-box">
-                    <input type="radio" name="stustatus" id="stustatus-" value="1">
+                    <input type="radio" name="stustatus" id="stustatus-" value="0">
                     <label for="stustatus-">求职</label>
                 </div>
             </div>

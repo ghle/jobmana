@@ -20,8 +20,8 @@
         <tbody>
         {volist name="list" id="vo"}
         <tr class="text-c"> 
-            {volist name="school" id="vos"}
-                {if condition =" $vos.classnum == 1279601 "}
+            {volist name="class" id="vos"}
+                {if condition =" $vos.classnum == $vo.class "}
              {include file="td" /}
             
             <td class="f-14">

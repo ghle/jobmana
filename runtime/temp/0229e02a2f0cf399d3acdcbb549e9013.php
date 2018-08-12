@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\index.html";i:1534069898;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\form.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\th.html";i:1534054582;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\td.html";i:1534054576;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\recyclebin.html";i:1534071908;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\form.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\th.html";i:1534054582;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\td.html";i:1534054576;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -48,10 +48,10 @@
     
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
-            <?php if (\Rbac::AccessCheck('add')) : ?><a class="btn btn-primary radius mr-5" href="javascript:;" onclick="layer_open('添加','<?php echo \think\Url::build('add', []); ?>')"><i class="Hui-iconfont">&#xe600;</i> 添加</a><?php endif; if (\Rbac::AccessCheck('forbid')) : ?><a href="javascript:;" onclick="forbid_all('<?php echo \think\Url::build('forbid', []); ?>')" class="btn btn-warning radius mr-5"><i class="Hui-iconfont">&#xe631;</i> 禁用</a><?php endif; if (\Rbac::AccessCheck('resume')) : ?><a href="javascript:;" onclick="resume_all('<?php echo \think\Url::build('resume', []); ?>')" class="btn btn-success radius mr-5"><i class="Hui-iconfont">&#xe615;</i> 恢复</a><?php endif; if (\Rbac::AccessCheck('delete')) : ?><a href="javascript:;" onclick="del_all('<?php echo \think\Url::build('delete', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 删除</a><?php endif; if (\Rbac::AccessCheck('recyclebin')) : ?><a href="javascript:;" onclick="open_window('回收站','<?php echo \think\Url::build('recyclebin', []); ?>')" class="btn btn-secondary radius mr-5"><i class="Hui-iconfont">&#xe6b9;</i> 回收站</a><?php endif; ?>
+            <?php if (\Rbac::AccessCheck('recycle')) : ?><a class="btn btn-success radius mr-5" href="javascript:;" onclick="recycle_all('<?php echo \think\Url::build('recycle', []); ?>')"><i class="Hui-iconfont">&#xe610;</i> 还原</a><?php endif; if (\Rbac::AccessCheck('deleteforever')) : ?><a href="javascript:;" onclick="del_forever_all('<?php echo \think\Url::build('deleteforever', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 彻底删除</a><?php endif; if (\Rbac::AccessCheck('clear')) : ?><a href="javascript:;" onclick="clear_recyclebin('<?php echo \think\Url::build('clear', []); ?>')" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 清空回收站</a><?php endif; ?>
         </span>
         <span class="r pt-5 pr-5">
-            共有数据 ：<strong><?php echo isset($count) ? $count :  '0'; ?></strong> 条
+            共有数据 ：<strong><?php echo $count; ?></strong> 条
         </span>
     </div>
     <table class="table table-border table-bordered table-hover table-bg mt-20">
@@ -76,13 +76,14 @@
 <th width="">班级</th>
 <th width="">状态</th>
 <!-- <th width="">登录用户编号</th> -->
-            <th width="80">操作</th>
+            <th width="70">操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-        <tr class="text-c"> 
-            <?php if(is_array($class) || $class instanceof \think\Collection || $class instanceof \think\Paginator): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;if($vos['classnum'] == $vo['class']): ?>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+   <!--      	<?php if(is_array($class) || $class instanceof \think\Collection || $class instanceof \think\Paginator): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vos): $mod = ($i % 2 );++$i;?>
+                {if condition =" $vos.classnum == $vo.class "}
              <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
 <td><?php echo $vo['identifier']; ?></td>
 <!-- <td><?php echo $vo['number']; ?></td> -->
@@ -102,21 +103,35 @@
 <td><?php echo $vos['classname']; ?></td>
 <td><?php if($vo['stustatus'] ==0): ?>求职 <?php else: ?> 在职 <?php endif; ?></td>
 
+<!-- <td><?php echo $vo['loginnum']; ?></td> --> -->
+            <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
+<td><?php echo $vo['identifier']; ?></td>
+<!-- <td><?php echo $vo['number']; ?></td> -->
+<td><?php echo $vo['fullname']; ?></td>
+<!-- <td><?php if($vo['sex'] ==0): ?>男 <?php else: ?> 女 <?php endif; ?> </td>
+<td><?php echo $vo['address']; ?></td>
+<td><?php echo $vo['telphone']; ?></td>
+<td><?php echo $vo['email']; ?></td>
+<td><?php echo $vo['education']; ?></td>
+<td><?php echo $vo['thumb']; ?></td>
+<td><?php echo $vo['school']; ?></td>
+<td><?php echo $vo['department']; ?></td>
+<td><?php echo $vo['class']; ?></td>
+<td><?php echo $vo['major']; ?></td>
+<td><?php echo $vo['entrytime']; ?></td>
+<td><?php echo $vo['graduateyear']; ?></td> -->
+<td><?php echo $vos['classname']; ?></td>
+<td><?php if($vo['stustatus'] ==0): ?>求职 <?php else: ?> 在职 <?php endif; ?></td>
+
 <!-- <td><?php echo $vo['loginnum']; ?></td> -->
-            
             <td class="f-14">
-                <?php if (\Rbac::AccessCheck('detail', 'Perman', 'admin')) : ?>
-                    <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','<?php echo \think\Url::build('detail', ['id'=>$vo['id']]); ?>')">详情</a>
-                     <a href="javascript:;" class="label label-success radius" onclick="layer_open('发送通知','<?php echo \think\Url::build('publish', ['id'=>$vo['id']]); ?>')">发送通知</a>
-                <?php endif; ?>
-                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
+                <?php if (\Rbac::AccessCheck('recycle')) : ?> <a href="javascript:;" onclick="recycle(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('recycle', []); ?>')" class="label label-success radius ml-5">还原</a><?php endif; if (\Rbac::AccessCheck('deleteforever')) : ?> <a href="javascript:;" onclick="del_forever(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('deleteforever', []); ?>')" class="label label-danger radius ml-5">彻底删除</a><?php endif; ?>
             </td>
-            <?php endif; endforeach; endif; else: echo "" ;endif; ?>
         </tr>
         <?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>
-    <div class="page-bootstrap"><?php echo isset($page) ? $page :  ''; ?></div>
+    <div class="page-bootstrap"><?php echo $page; ?></div>
 </div>
 
 <script type="text/javascript" src="__LIB__/jquery/1.9.1/jquery.min.js"></script>

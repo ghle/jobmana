@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\detail.html";i:1533801104;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\detail.html";i:1534071042;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -105,14 +105,15 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">图片：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <?php echo $vo['thumb']; ?>
+                <img src="<?php echo $vo['thumb']; ?>" width="200px;" height="300px;">
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在学校：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <?php echo $vo['school']; ?>
+                 <?php if(is_array($school) || $school instanceof \think\Collection || $school instanceof \think\Paginator): $i = 0; $__LIST__ = $school;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sch): $mod = ($i % 2 );++$i;if($sch['schoolnum'] == $vo['school']): ?><?php echo $sch['schoolname']; endif; endforeach; endif; else: echo "" ;endif; ?>
+ 
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -126,7 +127,7 @@
         <div class="row cl">
             <label class="form-label col-xs-3 col-sm-3">所在班级：</label>
             <div class="formControls col-xs-6 col-sm-6">
-              <?php echo $vo['class']; ?>
+              <?php if(is_array($class) || $class instanceof \think\Collection || $class instanceof \think\Paginator): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cla): $mod = ($i % 2 );++$i;if($cla['classnum'] == $vo['class']): ?><?php echo $cla['classname']; endif; endforeach; endif; else: echo "" ;endif; ?>
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
