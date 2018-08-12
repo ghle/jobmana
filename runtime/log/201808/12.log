@@ -1,0 +1,551 @@
+[ 2018-08-12T11:58:22+08:00 ] ::1 ::1 GET /jobmana/public/
+[ log ] localhost:81/jobmana/public/ [运行时间：2.111268s][吞吐率：0.47req/s] [内存消耗：2,408.80kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\WWW\jobmana\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]Missing argument 1 for getui\Demo::pushMessageToSingle(), called in E:\phpstudy\WWW\jobmana\application\index\controller\Index.php on line 11 and defined[E:\phpstudy\WWW\jobmana\extend\getui\Demo.php:134]
+
+---------------------------------------------------------------
+[ 2018-08-12T11:59:45+08:00 ] ::1 ::1 GET /jobmana/public/
+[ log ] localhost:81/jobmana/public/ [运行时间：0.165521s][吞吐率：6.04req/s] [内存消耗：1,241.26kb] [文件加载：41]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\WWW\jobmana\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-12T11:59:50+08:00 ] ::1 ::1 GET /jobmana/public/admin.html
+[ log ] localhost:81/jobmana/public/admin.html [运行时间：4.376055s][吞吐率：0.23req/s] [内存消耗：5,013.04kb] [文件加载：69]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.344043s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:3.796983s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:3.638962s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.064008s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1534046386) [ RunTime:0.001501s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T11:59:51+08:00 ] ::1 ::1 GET /jobmana/public/admin/pub/login.html
+[ log ] localhost:81/jobmana/public/admin/pub/login.html [运行时间：1.182650s][吞吐率：0.85req/s] [内存消耗：5,216.58kb] [文件加载：72]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.016002s ]
+[ info ] [ RUN ] app\admin\controller\Pub->login[ E:\phpstudy\WWW\jobmana\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\pub\login.html [ array (
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.805602s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017002s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.012502s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1534046390) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T11:59:51+08:00 ] ::1 ::1 GET /jobmana/public/captcha.html
+[ log ] localhost:81/jobmana/public/captcha.html [运行时间：0.267534s][吞吐率：3.74req/s] [内存消耗：1,275.59kb] [文件加载：41]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/pub/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\phpstudy\WWW\jobmana\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:07+08:00 ] ::1 ::1 POST /jobmana/public/admin/pub/checklogin.html
+[ log ] localhost:81/jobmana/public/admin/pub/checklogin.html [运行时间：4.559079s][吞吐率：0.22req/s] [内存消耗：5,124.63kb] [文件加载：72]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:81',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/pub/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'admin',
+  'password' => '123456',
+  'captcha' => 'pqdx',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.783600s ]
+[ info ] [ RUN ] app\admin\controller\Pub->checkLogin[ E:\phpstudy\WWW\jobmana\application\admin\controller\Pub.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.015001s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019502s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.046506s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1534046405,`login_count`=login_count+1,`last_login_ip`='0.0.0.0'  WHERE  `id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.039505s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Chrome(64.0.3282.140)' , 'Windows 7') [ RunTime:0.732093s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.012501s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"pqdx\";}' , 1534046404) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:11+08:00 ] ::1 ::1 GET /jobmana/public/admin/index/index.html
+[ log ] localhost:81/jobmana/public/admin/index/index.html [运行时间：0.727093s][吞吐率：1.38req/s] [内存消耗：5,128.04kb] [文件加载：72]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/pub/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.049006s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\phpstudy\WWW\jobmana\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\index\index.html [ array (
+  0 => 'groups',
+  1 => 'menu',
+) ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ RUN ] app\admin\widget\Index->menu[ E:\phpstudy\WWW\jobmana\application\admin\widget\Index.php ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.015502s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.046506s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.035005s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,2,3,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1534046410) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:11+08:00 ] ::1 ::1 GET /jobmana/public/admin/index/welcome.html
+[ log ] localhost:81/jobmana/public/admin/index/welcome.html [运行时间：0.411052s][吞吐率：2.43req/s] [内存消耗：5,084.64kb] [文件加载：70]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.019503s ]
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ E:\phpstudy\WWW\jobmana\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'last_login_ip',
+  1 => 'last_login_loc',
+  2 => 'current_login_ip',
+  3 => 'current_login_loc',
+  4 => 'info',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.014001s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005501s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1534046411) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:18+08:00 ] ::1 ::1 GET /jobmana/public/admin/schoolman/index.html
+[ log ] localhost:81/jobmana/public/admin/schoolman/index.html [运行时间：0.682586s][吞吐率：1.47req/s] [内存消耗：5,417.61kb] [文件加载：77]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'schoolman',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.035505s ]
+[ info ] [ RUN ] app\admin\controller\Schoolman->index[ E:\phpstudy\WWW\jobmana\application\admin\traits\controller\Controller.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\schoolman\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'page',
+  3 => 'numPerPage',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.017002s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005501s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_schoolman` [ RunTime:0.030004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_schoolman` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_schoolman` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/schoolman/index.html' , 'admin' , 'Schoolman' , 'index' , 'GET' , 'a:0:{}' , 1534046418) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:22+08:00 ] ::1 ::1 GET /jobmana/public/admin/departman/index.html
+[ log ] localhost:81/jobmana/public/admin/departman/index.html [运行时间：1.380176s][吞吐率：0.72req/s] [内存消耗：5,420.40kb] [文件加载：77]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'departman',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.019503s ]
+[ info ] [ RUN ] app\admin\controller\Departman->index[ E:\phpstudy\WWW\jobmana\application\admin\traits\controller\Controller.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'page',
+  3 => 'numPerPage',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.035505s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004500s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_departman` [ RunTime:0.039506s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_departman` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_departman` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.032004s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/departman/index.html' , 'admin' , 'Departman' , 'index' , 'GET' , 'a:0:{}' , 1534046422) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:26+08:00 ] ::1 ::1 GET /jobmana/public/admin/perman/index.html
+[ log ] localhost:81/jobmana/public/admin/perman/index.html [运行时间：0.562571s][吞吐率：1.78req/s] [内存消耗：5,500.75kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'perman',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.024003s ]
+[ info ] [ RUN ] app\admin\controller\Perman->index[ E:\phpstudy\WWW\jobmana\application\admin\traits\controller\Controller.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'page',
+  3 => 'numPerPage',
+) ]
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.017002s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005501s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_perman` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/perman/index.html' , 'admin' , 'Perman' , 'index' , 'GET' , 'a:0:{}' , 1534046425) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2018-08-12T12:00:33+08:00 ] ::1 ::1 GET /jobmana/public/admin/perman/detail/id/1.html
+[ log ] localhost:81/jobmana/public/admin/perman/detail/id/1.html [运行时间：0.618578s][吞吐率：1.62req/s] [内存消耗：5,362.66kb] [文件加载：74]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'perman',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:81',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:81/jobmana/public/admin/perman/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1q2cfhkalau3pu0jlj7qrogd62',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @module_init [ RunTime:0.028504s ]
+[ info ] [ RUN ] app\admin\controller\Perman->detail[ E:\phpstudy\WWW\jobmana\application\admin\controller\Perman.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\detail.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behavior\WebLog @app_end [ RunTime:0.029003s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012502s ]
+[ sql ] [ SQL ] SELECT `w`.* FROM `tp_perman` `w` WHERE  `w`.`id` = '1' LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015502s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.011501s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 7' , 'Chrome(64.0.3282.140)' , 'http://localhost:81/jobmana/public/admin/perman/detail/id/1.html' , 'admin' , 'Perman' , 'detail' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"1\";}' , 1534046433) [ RunTime:0.000500s ]
+
+---------------------------------------------------------------

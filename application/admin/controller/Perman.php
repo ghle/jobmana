@@ -38,4 +38,23 @@ class Perman extends Controller
 
         return $this->view->fetch();
     }
+
+     public function publish()
+    {
+        $hashids = new \getui\Demo(); 
+         // $hashids->pushMessageToApp();
+        $id = $this->request->param('id');
+        if (!$id) {
+            throw new Exception('缺少必要参数ID');
+        }
+        // $res=db('Perman')->where('id',$id)->find();
+        // dump($res);die;//number
+        // $hashids->pushMessageToSingle($res['number']);
+
+        $res=db('advertise')->field('advname,advduty,id')->where('id',$id)->select();
+        
+        $this->view->assign('vo',$res);
+
+        return $this->view->fetch();
+    }
 }

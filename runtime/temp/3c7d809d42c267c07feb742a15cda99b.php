@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\index.html";i:1533800934;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\form.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\th.html";i:1533800554;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\td.html";i:1533801166;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\index.html";i:1533976204;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\form.html";i:1533714522;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\th.html";i:1533800554;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\td.html";i:1533801166;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -102,6 +102,7 @@
             <td class="f-14">
                  <?php if (\Rbac::AccessCheck('detail', 'Perman', 'admin')) : ?>
                     <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','<?php echo \think\Url::build('detail', ['id'=>$vo['id']]); ?>')">详情</a>
+                     <a href="javascript:;" class="label label-success radius" onclick="layer_open('发送通知','<?php echo \think\Url::build('publish', ['id'=>$vo['id']]); ?>')">发送通知</a>
                 <?php endif; ?>
                 <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
             </td>
