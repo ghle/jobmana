@@ -53,7 +53,7 @@ class Demo
 
 // //pushMessageToList();
 
-// // pushMessageToApp();
+// pushMessageToApp();
 
 
 // //getPushMessageResultDemo();
@@ -275,10 +275,10 @@ function pushMessageToList()
 }
 
 //群推接口案例
-function pushMessageToApp(){
+function pushMessageToApp($title,$content){
     $igt = new \IGeTui(HOST,APPKEY,MASTERSECRET);
     // $template = IGtTransmissionTemplateDemo();
-    $template = $this->IGtLinkTemplateDemo();
+    $template = $this->IGtLinkTemplateDemo($title,$content);
     //个推信息体
     //基于应用消息体
     $message = new \IGtAppMessage();
@@ -304,9 +304,9 @@ function pushMessageToApp(){
     //$message->set_conditions($cdt->getCondition());
 
     $rep = $igt->pushMessageToApp($message,"任务组名");
-
-    var_dump($rep);
-    echo ("<br><br>");
+    return true;
+    // var_dump($rep);
+    // echo ("<br><br>");
 }
 
 //所有推送接口均支持四个消息模板，依次为通知弹框下载模板，通知链接模板，通知透传模板，透传模板
