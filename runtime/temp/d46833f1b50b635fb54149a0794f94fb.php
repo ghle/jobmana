@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\perman\publish.html";i:1534051918;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\edit.html";i:1533722646;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -46,36 +46,25 @@
 
 <div class="page-container">
     <form class="form form-horizontal" id="form" method="post" action="<?php echo \think\Request::instance()->baseUrl(); ?>">
-       
-          
+        <input type="hidden" name="id" value="<?php echo isset($vo['id']) ? $vo['id'] :  ''; ?>">
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">岗位名称：</label>
+            <label class="form-label col-xs-3 col-sm-3">班级编号：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <!-- <input type="text" class="input-text" placeholder="学号" name="number" value="<?php echo isset($vo['advduty']) ? $vo['advduty'] :  ''; ?>" > -->
-                 <select name="advname" class="select">
-                 	<option value="0">请选择</option>
-                 		<?php if(is_array($vo) || $vo instanceof \think\Collection || $vo instanceof \think\Paginator): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-	                        
-	                        <option value="<?php echo $vo['advname']; ?>"><?php echo $vo['advname']; ?></option>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                 </select>
+                <input type="text" class="input-text" placeholder="班级编号" name="classnum" value="<?php echo isset($vo['classnum']) ? $vo['classnum'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">岗位职责：</label>
+            <label class="form-label col-xs-3 col-sm-3">班级名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
-                <!-- <input type="text" class="input-text" placeholder="姓名" name="fullname" value="<?php echo isset($vo['advduty']) ? $vo['advduty'] :  ''; ?>" > -->
-                 <textarea class="textarea" placeholder="请输入岗位职责" name="advduty" style="width:100%; overflow:auto;word-break:break-all;height: 200px;" onKeyUp="textarealength(this, 100)"></textarea>
+                <input type="text" class="input-text" placeholder="班级名称" name="classname" value="<?php echo isset($vo['classname']) ? $vo['classname'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
-        
-       
 
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-                <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;发布&nbsp;&nbsp;</button>
+                <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
                 <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
             </div>
         </div>
@@ -90,16 +79,21 @@
 <script type="text/javascript" src="__LIB__/icheck/jquery.icheck.min.js"></script>
 
 <script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
-<script type="text/javascript" src="__LIB__/My97DatePicker/WdatePicker.js"></script>
 <script>
     $(function () {
-     
+
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
         $("#form").Validform({
             tiptype: 2,
             ajaxPost: true,
             showAllError: true,
             callback: function (ret){
-
                 ajax_progress(ret);
             }
         });

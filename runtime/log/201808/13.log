@@ -1,0 +1,865 @@
+[ 2018-08-13T21:16:05+08:00 ] [ error ] [0]sign不存在
+
+---------------------------------------------------------------
+[ 2018-08-13T21:16:07+08:00 ] [ error ] [0]sign不存在
+
+---------------------------------------------------------------
+[ 2018-08-13T21:17:20+08:00 ] [ error ] [0]sign不存在
+
+---------------------------------------------------------------
+[ 2018-08-13T21:23:55+08:00 ] [ error ] [0]app_type格式不正确
+
+---------------------------------------------------------------
+[ 2018-08-13T21:33:24+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.040370s][吞吐率：24.77req/s] [内存消耗：1,288.19kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------257271848711183455214254',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '9ef78625-e4c3-4269-ac44-cb07eac5cde4',
+  'cache-control' => 'no-cache',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\api\controller\IAuth' not found[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:42]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:33:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.020667s][吞吐率：48.39req/s] [内存消耗：1,149.43kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------528540318337463834282113',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '499eb524-459d-41ca-88b6-547fee8c3ab6',
+  'cache-control' => 'no-cache',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T21:44:10+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.032887s][吞吐率：30.41req/s] [内存消耗：1,300.13kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------461310662334382088105431',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '658ef9f6-571d-4cd2-92b2-437bf12d2fb8',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:44:53+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.022390s][吞吐率：44.66req/s] [内存消耗：1,299.98kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------823765853086558261082615',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e82fc497-f8f7-402f-a97b-66fcaad672f2',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:45:21+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.022426s][吞吐率：44.59req/s] [内存消耗：1,300.02kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------602021143635487491384633',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '3eca3f52-401a-415c-b415-2b30d03221ac',
+  'cache-control' => 'no-cache',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:45:26+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.023295s][吞吐率：42.93req/s] [内存消耗：1,299.98kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------568890957500199218491480',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'c222c6b6-10f9-4d6e-a972-11bd6c381930',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:45:59+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.031921s][吞吐率：31.33req/s] [内存消耗：1,298.34kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------294141309479046378917500',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '75b0be78-a0b2-4f03-9ce1-b4d1215d446d',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:46:17+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.026006s][吞吐率：38.45req/s] [内存消耗：1,297.99kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------431401437944709286042725',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '34464648-1968-45a7-b26e-8ae198b92873',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:46:44+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.020334s][吞吐率：49.18req/s] [内存消耗：1,283.88kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------580645482913892825950946',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'b7bc513b-a3e5-4484-bf07-79f90a9eba3c',
+  'cache-control' => 'no-cache',
+  'did' => '123',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T21:47:43+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.041794s][吞吐率：23.93req/s] [内存消耗：1,299.73kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------560151454046387108353904',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'c3866f54-4cbd-41bf-afb0-daf9de50e173',
+  'cache-control' => 'no-cache',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: age[E:\phpstudy\WWW\jobmana\application\common\lib\IAuth.php:54]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:48:02+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.023439s][吞吐率：42.66req/s] [内存消耗：1,299.71kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------770182420311312295814877',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '5d69d199-c034-40c7-8383-5c6c288d292d',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: headers[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:52]
+
+---------------------------------------------------------------
+[ 2018-08-13T21:48:24+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.038289s][吞吐率：26.12req/s] [内存消耗：1,235.27kb] [文件加载：50]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------942217635401838799117711',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'fed4936a-b669-4c1c-8b25-4cbc78346b1d',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T21:52:29+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.021599s][吞吐率：46.30req/s] [内存消耗：1,235.91kb] [文件加载：50]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------091336254213908470868162',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'b99da655-641f-4be5-9152-ad8a5a18ced8',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T22:04:38+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.022386s][吞吐率：44.67req/s] [内存消耗：1,152.19kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------408530194417703822055257',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '1a456e11-03e2-4315-8262-c7b6d08d84f7',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T22:07:33+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.026210s][吞吐率：38.15req/s] [内存消耗：1,302.01kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------011406884984397854724811',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '66c1233e-9c71-40dd-85c5-f03128888e1d',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: time[E:\phpstudy\WWW\jobmana\application\common\lib\IAuth.php:59]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:07:56+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.022759s][吞吐率：43.94req/s] [内存消耗：1,301.69kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------303203858812406712628062',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'f7ab38fe-cb52-4695-9d40-bd1412e49429',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: time[E:\phpstudy\WWW\jobmana\application\common\lib\IAuth.php:59]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:10:25+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.026192s][吞吐率：38.18req/s] [内存消耗：1,301.95kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------215615843386761097350531',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '666503c1-266e-42a8-99f6-56179c8635a2',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: time[E:\phpstudy\WWW\jobmana\application\common\lib\IAuth.php:59]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:10:46+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.046872s][吞吐率：21.33req/s] [内存消耗：1,282.52kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------666434548523359836340585',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '258d2075-738a-462f-810b-fd5af32197ff',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => '6sQ6kZr4inenqWOvTohyTLNLkmCY1zWWWRuYWXb0u8a6qbCBsveNCLgW5a2QlOhAeipFn2DzikFO5tlPZCjA1tdNyRz6mBscuIWwdbgB49s=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T22:11:26+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.027310s][吞吐率：36.62req/s] [内存消耗：1,300.34kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------478967513955821720434559',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '5c98cab4-ddff-4f09-a67f-90ad607450e0',
+  'cache-control' => 'no-cache',
+  'age' => '24',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:12:03+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.041975s][吞吐率：23.82req/s] [内存消耗：1,300.27kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------322015384890885127702407',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e762dfaf-dd66-4762-934d-9346d36e923a',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:12:29+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.034381s][吞吐率：29.09req/s] [内存消耗：1,300.27kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------291236383390845089080528',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '9dca8d37-5bd0-4bc4-80fd-af9148959a84',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:12:59+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.023388s][吞吐率：42.76req/s] [内存消耗：1,299.58kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------676963738217546603231083',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '7c21ebf6-255e-462c-ae05-f2e546fd29f6',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:13:12+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.019614s][吞吐率：50.98req/s] [内存消耗：1,282.30kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------510674522875584037955918',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '5d83a612-1210-4180-9156-8732db459bb8',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-13T22:20:42+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/test/index
+[ log ] localhost:81/jobmana/public/index.php/api/test/index [运行时间：0.027206s][吞吐率：36.76req/s] [内存消耗：1,300.59kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'test',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------291767350617975789074576',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '0abe7eba-ae5d-448c-9ea4-e696ff976a5e',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]授权码sign失败[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:47]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:28:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/time/
+[ log ] localhost:81/jobmana/public/index.php/api/time/ [运行时间：0.026947s][吞吐率：37.11req/s] [内存消耗：1,271.53kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'time',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------585246775185195519238756',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'ede31aec-0827-495c-9504-2276ad12fcb1',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Time->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Time.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\api\controller\show()[E:\phpstudy\WWW\jobmana\application\api\controller\Time.php:16]
+
+---------------------------------------------------------------
+[ 2018-08-13T22:29:12+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/time/
+[ log ] localhost:81/jobmana/public/index.php/api/time/ [运行时间：0.017100s][吞吐率：58.48req/s] [内存消耗：1,202.16kb] [文件加载：47]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'time',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------968600361440909272268113',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '001eb7c6-864e-4900-bea4-f085381f52f4',
+  'cache-control' => 'no-cache',
+  'mt' => '12',
+  'apptype' => 'ios',
+  'sign' => 'c4OAw0tzuRJSH955Ibk2bdMTb1vCIqWAQZdtAbXo17w=',
+)
+[ info ] [ PARAM ] array (
+  'mt' => '12',
+)
+[ info ] [ RUN ] app\api\controller\Time->index[ E:\phpstudy\WWW\jobmana\application\api\controller\Time.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
