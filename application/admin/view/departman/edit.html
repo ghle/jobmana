@@ -19,6 +19,35 @@
         </div>
 
         <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学校名称：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+               
+
+                <select class="select" name="schoolid">
+                <option value="0">请选择</option>
+
+                 {volist name="school" id="sch"} 
+                    {if condition=" $edit eq 'edit' "}
+                        {if condition="$sch.schoolnum eq $vo.schoolid"}
+                            <option value="{$sch.schoolnum}" selected="true">{$sch.schoolname}</option>
+                        {else/}
+                        <option value="{$sch.schoolnum}">{$sch.schoolname}</option>
+                        {/if}
+                    {/if}
+
+                    {if condition=" $edit neq 'edit' "}
+                         <option value="{$sch.schoolnum}">{$sch.schoolname}</option>
+                    {/if}
+                 {/volist}
+                </select>
+
+
+
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
                 <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
                 <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>

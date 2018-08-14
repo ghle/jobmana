@@ -14,18 +14,32 @@
         <thead>
         <tr class="text-c">
             {include file="th" /}
+            <th>求职人数</th>
+            <th>在职人数</th>
+            <th>班级总人数</th>
             <th width="70">操作</th>
         </tr>
         </thead>
         <tbody>
         {volist name="list" id="vo"}
         <tr class="text-c">
-            {include file="td" /}
-            <td class="f-14">
-                {$vo.status|show_status=$vo.id}
-                {tp:menu menu='sedit' /}
-                {tp:menu menu='sdelete' /}
-            </td>
+            {volist name="school" id="scho"}
+                  {if condition=' $vo.schoolid eq $scho.schoolnum '}
+                    {include file="td" /}
+                    <td>{$scho.schoolname}</td>
+                    <td>{$vo.working}</td>
+                    <td>{$vo.worked}</td>
+                    <td>{$vo.total}</td>
+                    <td class="f-14">
+                        {tp:access action="detail"}
+                            <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','{:\\think\\Url::build(\'detail\', [\'id\'=>$vo[\'id\']])}')">详情</a>
+                        {/tp:access}
+                        {$vo.status|show_status=$vo.id}
+                        {tp:menu menu='sedit' /}
+                        {tp:menu menu='sdelete' /}
+                    </td>
+                {/if}
+            {/volist}
         </tr>
         {/volist}
         </tbody>

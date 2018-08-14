@@ -245,8 +245,8 @@ class Perman extends Controller
                  return ajax_return_adv_error('此用户数据异常2');
             }
 
-            // $var=$hashids->pushMessageToSingle($res['number'],$params['advname'],$params['advduty']);
-            $var=$hashids->pushMessageToApp($params['advname'],$params['advduty']);
+            $var=$hashids->pushMessageToSingle($res['number'],$params['advname'],$params['advduty']);
+            // $var=$hashids->pushMessageToApp($params['advname'],$params['advduty']);
             
             return ajax_return_adv('发送成功');
 

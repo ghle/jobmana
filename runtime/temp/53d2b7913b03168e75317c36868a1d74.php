@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\index.html";i:1534053888;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\form.html";i:1533723590;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\th.html";i:1533818446;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\td.html";i:1533871926;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\index.html";i:1534053888;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\form.html";i:1533723590;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\th.html";i:1534252150;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\advertise\td.html";i:1534252162;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -72,7 +72,7 @@
 <th width="">职位月薪</th>-->
 <th width="">是否招聘完成</th>
 <th width="">是否发布</th>
-<th width="">是否审核通过</th> 
+
 <th>信息发布公司</th>
             <th width="70">操作</th>
         </tr>
@@ -96,14 +96,12 @@
 <td><?php echo $vo['advduty']; ?></td>
 <td><?php echo $vo['advsalary']; ?></td>-->
 <td>
-<?php if($vo['advfinnish'] ==0): ?>未审核<?php endif; if($vo['advfinnish'] ==1): ?>是<?php endif; if($vo['advfinnish'] ==2): ?>否<?php endif; ?>
+<?php if($vo['advfinnish'] ==1): ?>是<?php endif; if($vo['advfinnish'] ==2): ?>否<?php endif; ?>
 </td>
 <td>
-<?php if($vo['advtfpublish'] ==0): ?>未审核<?php endif; if($vo['advtfpublish'] ==1): ?>是<?php endif; if($vo['advtfpublish'] ==2): ?>否<?php endif; ?>
+<?php if($vo['advtfpublish'] ==1): ?>是<?php endif; if($vo['advtfpublish'] ==2): ?>否<?php endif; ?>
 </td>
-<td>
-<?php if($vo['advexamine'] ==0): ?>未审核<?php endif; if($vo['advexamine'] ==1): ?>是<?php endif; if($vo['advexamine'] ==2): ?>否<?php endif; ?>
-</td> 
+
 
 
 

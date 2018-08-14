@@ -23,7 +23,6 @@ define('HOST','http://sdk.open.api.igexin.com/apiex.htm');
 define('APPKEY','jd92fdpAivAjzU73RGDXF3');
 define('APPID','9zJLn5bptE6A5bo458Nzi1');
 define('MASTERSECRET','tBGWOverfh6nijfLIynrM2');
-// define('CID','b8176b45cdd9558cd9cf7bfc0b99706b');
 
 class Demo 
 {
@@ -51,7 +50,7 @@ class Demo
 
 // //getUserCountByTagsDemo();
 
-// //pushMessageToList();
+// pushMessageToList();
 
 // pushMessageToApp();
 
@@ -232,45 +231,40 @@ function pushMessageToSingleBatch()
 }
 
 //多推接口案例
-function pushMessageToList()
-{
+function pushMessageToList($res,$title,$content)
+{  
+
     putenv("gexin_pushList_needDetails=true");
     putenv("gexin_pushList_needAsync=true");
 
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
-    //消息模版：
-    // 1.TransmissionTemplate:透传功能模板
-    // 2.LinkTemplate:通知打开链接功能模板
-    // 3.NotificationTemplate：通知透传功能模板
-    // 4.NotyPopLoadTemplate：通知弹框下载功能模板
+    $igt = new \IGeTui(HOST, APPKEY, MASTERSECRET);
 
+    $template = $this->IGtLinkTemplateDemo($title,$content);
 
-    //$template = IGtNotyPopLoadTemplateDemo();
-    //$template = IGtLinkTemplateDemo();
-    //$template = IGtNotificationTemplateDemo();
-    $template = IGtTransmissionTemplateDemo();
-    //个推信息体
-    $message = new IGtListMessage();
+    $message = new \IGtListMessage();
     $message->set_isOffline(true);//是否离线
     $message->set_offlineExpireTime(3600 * 12 * 1000);//离线时间
     $message->set_data($template);//设置推送消息类型
-//    $message->set_PushNetWorkType(1);	//设置是否根据WIFI推送消息，1为wifi推送，0为不限制推送
-//    $contentId = $igt->getContentId($message);
+
     $contentId = $igt->getContentId($message,"toList任务别名功能");	//根据TaskId设置组名，支持下划线，中文，英文，数字
 
-    //接收方1
-    $target1 = new IGtTarget();
-    $target1->set_appId(APPID);
-    $target1->set_clientId(CID);
-//    $target1->set_alias(Alias);
+        $arr=[];
+            foreach ($res as $key => $value) {
+               $arr[$key]['CID']=$value['number'];
+            }
 
-    $targetList[] = $target1;
+        $obj=[];
+            foreach ($arr as $key => $value) {
+                $hashids=new \IGtTarget();
+                $obj[$key]=$hashids;
+                $hashids->set_appId(APPID);
+                $hashids->set_clientId($arr[$key]['CID']);
+            }
 
-    $rep = $igt->pushMessageToList($contentId, $targetList);
+    $rep = $igt->pushMessageToList($contentId, $obj);
+    
+    return true;
 
-    var_dump($rep);
-
-    echo ("<br><br>");
 
 }
 
@@ -373,7 +367,7 @@ function IGtNotificationTemplateDemo(){
 }
 
 function IGtTransmissionTemplateDemo(){
-    $template =  new IGtTransmissionTemplate();
+    $template =  new \IGtTransmissionTemplate();
     $template->set_appId(APPID);//应用appid
     $template->set_appkey(APPKEY);//应用appkey
     $template->set_transmissionType(1);//透传消息类型
@@ -394,8 +388,8 @@ function IGtTransmissionTemplateDemo(){
 //        $message = new IGtSingleMessage();
 
     //APN高级推送
-    $apn = new IGtAPNPayload();
-    $alertmsg=new DictionaryAlertMsg();
+    $apn = new \IGtAPNPayload();
+    $alertmsg=new \DictionaryAlertMsg();
     $alertmsg->body="body";
     $alertmsg->actionLocKey="ActionLockey";
     $alertmsg->locKey="LocKey";
