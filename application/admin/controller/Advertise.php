@@ -208,5 +208,98 @@ class Advertise extends Controller
             return $this->view->fetch();
         }
     }
+        /**********发送通知************/
+     public function publish()
+    {
 
+        if ($this->request->isPost()) {
+            
+            $params= $this->request->param();
+            
+            if ($params['advname']==0 || $params['classesid']==0) {
+                return ajax_return_adv_error('请选择学校或者班级'); 
+            }
+
+            if (empty($params['classesid'])) {
+                return ajax_return_adv_error('必要classesid参数不能为空'); 
+            }
+        
+            $work=db('advertise')->where(['isdelete'=>0,'status'=>1,'id'=>$params['id']])->find();
+           
+            // 1、查看指定班级的人员 
+            $res=db('Perman')->field('number,id,fullname,sex')->where('class', $params['classesid'])->select();
+
+            if (empty($res)) {
+                return ajax_return_adv_error('没有人数，请重新选择班级');
+            }
+
+            $hashids = new \getui\Demo();
+             // 2、之后进行定向的通知处理         
+            $var=$hashids->pushMessageToList($res,$work['advname'],$work['advduty']);
+            
+            if (!$var) {
+                  return ajax_return_adv_error('通知发送失败');
+            }
+            // 3、数据记录
+            $data=[];
+            foreach ($res as $key => $value) {
+                $data[$key]=[
+                    'tittle'  =>$work['advname'],
+                    'content' =>$work['advduty'],
+                   
+                    'username'=>$res[$key]['fullname'],
+                    'usersex' =>$res[$key]['sex'],
+                    'sendtime'=>date("Y-m-d")
+                ];
+
+            }
+
+            
+            db('publog')->insertAll($data);
+
+            return ajax_return_adv('发送成功');
+
+        }
+
+        return $this->view->fetch();
+    }
+
+
+    public function school()
+    {
+       
+       $school=db('schoolman')->where(['status'=>1,'isdelete'=>0])->select();
+
+       $data=[
+            'code'=>200,
+            'dats'=>$school,
+            'msg'=>'数据返回成功啦',
+        ];
+
+       return json($data);
+    }
+
+    public function classes()
+    {
+        $params=input();
+
+        if (empty($params)) {
+           return json('数据不合法');
+        }
+        if (empty($params['schoolnum'])) {
+            return json('数据不合法不能为空');
+        }
+        $class=db('departman')->where(['status'=>1,'isdelete'=>0,'schoolid'=>$params['schoolnum']])->select();
+        // 数据返回
+
+        $data=[
+            'code'=>200,
+            'dats'=>$class,
+            'msg'=>'数据返回成功啦',
+        ];
+        return json($data);
+
+    }
+
+  
 }

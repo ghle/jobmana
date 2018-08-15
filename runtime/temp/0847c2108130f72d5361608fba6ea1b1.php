@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\index.html";i:1534249860;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:76:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\form.html";i:1533722646;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\th.html";i:1534241762;s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\departman\td.html";i:1534242338;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\publog\index.html";i:1534317402;s:75:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\base.html";i:1533694440;s:86:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\template\javascript_vars.html";i:1533694438;s:73:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\publog\form.html";i:1534317402;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\publog\th.html";i:1534318632;s:71:"E:\phpstudy\WWW\jobmana\public/../application/admin\view\publog\td.html";i:1534318634;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -58,35 +58,28 @@
         <thead>
         <tr class="text-c">
             <th width="25"><input type="checkbox"></th>
-<th width="">班级编号</th>
-<th width="">班级名称</th>
-<th width="">学校名称</th>
-            <th>求职人数</th>
-            <th>在职人数</th>
-            <th>班级总人数</th>
+<th width="">日志ID</th>
+<th width="">职位名称</th>
+<th width="">职位描述</th>
+<th width="">目标人姓名</th>
+<th width="">目标人性别</th>
+<th width="">发送时间</th>
             <th width="70">操作</th>
         </tr>
         </thead>
         <tbody>
         <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <tr class="text-c">
-            <?php if(is_array($school) || $school instanceof \think\Collection || $school instanceof \think\Paginator): $i = 0; $__LIST__ = $school;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$scho): $mod = ($i % 2 );++$i;if($vo['schoolid'] == $scho['schoolnum']): ?>
-                    <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
-<td><?php echo $vo['classnum']; ?></td>
-<td><?php echo $vo['classname']; ?></td>
-
-
-                    <td><?php echo $scho['schoolname']; ?></td>
-                    <td><?php echo $vo['working']; ?></td>
-                    <td><?php echo $vo['worked']; ?></td>
-                    <td><?php echo $vo['total']; ?></td>
-                    <td class="f-14">
-                        <?php if (\Rbac::AccessCheck('detail', 'Departman', 'admin')) : ?>
-                            <a href="javascript:;" class="label label-success radius" onclick="layer_open('详情','<?php echo \think\Url::build('detail', ['id'=>$vo['id']]); ?>')">详情</a>
-                        <?php endif; ?>
-                        <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
-                    </td>
-                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+            <td><input type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>"></td>
+<td><?php echo $vo['id']; ?></td>
+<td><?php echo $vo['tittle']; ?></td>
+<td><?php echo $vo['content']; ?></td>
+<td><?php echo $vo['username']; ?></td>
+<td><?php if($vo['usersex'] == 0): ?>男<?php else: ?>女<?php endif; ?></td>
+<td><?php echo $vo['sendtime']; ?></td>
+            <td class="f-14">
+                <?php echo show_status($vo['status'],$vo['id']); if (\Rbac::AccessCheck('edit')) : ?> <a title="编辑" href="javascript:;" onclick="layer_open('编辑','<?php echo \think\Url::build('edit', ['id' => $vo["id"], ]); ?>')" style="text-decoration:none" class="ml-5"><i class="Hui-iconfont">&#xe6df;</i></a><?php endif; if (\Rbac::AccessCheck('delete')) : ?> <a title="删除" href="javascript:;" onclick="del(this,'<?php echo $vo['id']; ?>','<?php echo \think\Url::build('delete', []); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a><?php endif; ?>
+            </td>
         </tr>
         <?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>

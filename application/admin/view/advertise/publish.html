@@ -1,0 +1,116 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
+  
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">学校名称：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                
+                 <select name="advname" class="select" id="school">
+                    <option value="0">请选择</option>
+                        
+                 </select>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+         <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">班级名称：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                
+                 <select name="classesid" class="select" id="classes">     
+                    <option value="0">请选择</option>   
+
+                 </select>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;发布&nbsp;&nbsp;</button>
+                <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="__LIB__/My97DatePicker/WdatePicker.js"></script>
+<script>
+    $(function () {
+            // 初始化学校和班级信息
+            school(); classes();
+            // 更改时重新加在数据
+            $("#school").change(function(){                
+                classes();
+            })
+
+        $("#form").Validform({
+            tiptype: 2,
+            ajaxPost: true,
+            showAllError: true,
+            callback: function (ret){
+
+                ajax_progress(ret);
+            }
+        });
+
+
+        function school() {
+          
+              $.ajax({
+                    url:"http://localhost:81/jobmana/public/index.php/admin/advertise/school/",
+                    type:"GET",
+                  
+                    success: function(data){      
+
+                                str="<option value="+0+">请选择</option>";
+                                for (var i = 0; i < data.dats.length; i++) {
+                                   str+="<option value="+data.dats[i].schoolnum+">"+data.dats[i].schoolname+"</option>";
+                                }
+                            
+                            $("#school").html(str); 
+                        },
+                    error:function (argument) {
+
+                        console.log(argument);
+                    }
+                });
+        };
+
+        function classes()
+        {
+            var pcode = $("#school").val();
+
+        
+            $.ajax({
+                 
+                    url:"http://localhost:81/jobmana/public/index.php/admin/advertise/classes",
+                    type:"POST",
+                    data:{schoolnum:pcode},
+                   
+                    success: function(data){
+                    
+                             str="<option value="+0+">请选择</option>";
+                                for (var i = 0; i < data.dats.length; i++) {
+                                   str+="<option value="+data.dats[i].classnum+">"+data.dats[i].classname+"</option>";
+                                }
+                            
+                            $("#classes").html(str); 
+
+                        },
+                    error:function (argument) {
+                        console.log('this');
+                        console.log(argument.dats);
+                    }
+                });
+
+            
+        };
+
+    })
+</script>
+{/block}
