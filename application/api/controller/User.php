@@ -10,6 +10,21 @@ class User extends Common
 {
 
 	/**
+	 * [token 获取登录唯一标识]
+	 * @return [type] [description]
+	 */
+	public function token()
+	{
+		$param=$this->params;
+
+		if (!$this->isMobile($param['phone'])) {
+			$this->return_msg(0,'请输入正确的手机号',[]);
+		}
+		// 时间time已经common.php做限制
+		return IAuth::setAppLoginToken($param['phone']);
+	}
+
+	/**
 	 * [login 用户登录接口]
 	 * @author lucky
 	 * @DateTime 2018-08-18T11:30:10+0800
@@ -17,10 +32,7 @@ class User extends Common
 	 */
 	public function login()
 	{
-		// 允许 runapi.showdoc.cc 发起的跨域请求
-		header("Access-Control-Allow-Origin: *"); 
-		header("Access-Control-Allow-Credentials : true"); 
-		header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Connection, User-Agent, Cookie");
+		
 		// 验证参数
 		$param=$this->params;
 		$token=$param['access_token'];

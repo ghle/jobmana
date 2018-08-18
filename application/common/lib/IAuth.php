@@ -51,7 +51,7 @@ class IAuth {
 
         // 基于不同的场景验证不同的参数
        
-        if(!is_array($arr) || empty($arr['age'])|| $arr['age'] != $data['age']) {
+        if(!is_array($arr) || empty($arr['target'])|| $arr['target'] != $data['target']) {
             return false;
         }
 

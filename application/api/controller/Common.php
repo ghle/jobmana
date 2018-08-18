@@ -15,8 +15,7 @@ class Common extends Controller {
     protected $rules = array(
         'Test' => array(
             'index'           => array(
-                'mt' => 'require',
-              
+                'phone' => 'require', 
             ),
          ),
         'User' => array(
@@ -27,6 +26,7 @@ class Common extends Controller {
             ),
             'token'           =>array(
                 'phone' => 'require|length:11|number',
+                'time' => 'require',
             )
          )
             
@@ -35,13 +35,12 @@ class Common extends Controller {
     protected function _initialize() {
         parent::_initialize();
         $this->request = Request::instance();
-        // $this->check_time($this->request->only(['time']));
+        $this->check_time($this->request->only(['time']));
         // $this->check_token($this->request->param());
         // $this->check_sign();
         $this->params = $this->check_params($this->request->param(true));
     }
 
-  
     public function check_sign()
     {
     	$header= $this->request->header();
@@ -50,9 +49,9 @@ class Common extends Controller {
     		throw new ApiException("sign不存在", 400);	
     	}
        
-    	if(!in_array($header['apptype'],config('app.apptypes'))) {
-    		throw new ApiException("app_type格式不正确", 400);
-    	}
+    	// if(!in_array($header['apptype'],config('app.apptypes'))) {
+    	// 	throw new ApiException("app_type格式不正确", 400);
+    	// }
         if(!IAuth::checkSignPass($header)) {
             throw new ApiException('授权码sign失败', 401);
         }
