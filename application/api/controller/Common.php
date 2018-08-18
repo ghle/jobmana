@@ -18,6 +18,16 @@ class Common extends Controller {
                 'mt' => 'require',
               
             ),
+         ),
+        'User' => array(
+            'login'           => array(
+                'username' => 'require|length:11|number',
+                'password' => 'require|length:11|number',
+                'access_token'    =>'require'
+            ),
+            'token'           =>array(
+                'phone' => 'require|length:11|number',
+            )
          )
             
     );
@@ -27,7 +37,7 @@ class Common extends Controller {
         $this->request = Request::instance();
         // $this->check_time($this->request->only(['time']));
         // $this->check_token($this->request->param());
-        $this->check_sign();
+        // $this->check_sign();
         $this->params = $this->check_params($this->request->param(true));
     }
 
@@ -72,13 +82,13 @@ class Common extends Controller {
      * @param  [array]  $data [接口要返回的数据]
      * @return [string]       [最终的json数据]
      */
-    public function return_msg($code, $msg = '', $data = []) {
+    public function return_msg($code, $msg = '', $data = [],$httpCode=200) {
         /*********** 组合数据  ***********/
         $return_data['code'] = $code;
         $return_data['msg']  = $msg;
         $return_data['data'] = $data;
         /*********** 返回信息并终止脚本  ***********/
-        echo json_encode($return_data);die;
+        echo json_encode($return_data,$httpCode);die;
     }
     /**
      * 验证token(防止篡改数据)
@@ -119,6 +129,19 @@ class Common extends Controller {
         }
         /*********** 如果正常,通过验证  ***********/
         return $arr;
+    }
+
+
+    //验证是否是正确的手机号
+   public function isMobile($phone)
+    {
+        $rule = '/^0?(13|14|15|17|18)[0-9]{9}$/';
+        $result = preg_match($rule, $phone);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
    
    

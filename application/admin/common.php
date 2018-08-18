@@ -253,20 +253,21 @@ function list_to_tree($list, $pk = 'id', $pid = 'pid', $child = '_child', $root 
 {
     // 创建Tree
     $tree = [];
+
     if (is_array($list)) {
 
         // 创建基于主键的数组引用
         $refer = [];
         foreach ($list as $key => $data) {
-
             if ($data instanceof \think\Model) {
-//                wjl 如果是数据模型对象 就转换为数组格式的数据
                 $list[$key] = $data->toArray();
             }
             $refer[$data[$pk]] =& $list[$key];
+           
         }
 
         foreach ($list as $key => $data) {
+
             // 判断是否存在parent
 
             if (!isset($list[$key][$child])) {

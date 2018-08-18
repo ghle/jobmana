@@ -21,4 +21,6 @@ return [
     ],
     'app_sign_time' => 10000000000,// sign失效时间
     'app_sign_cache_time' => 20,// sign 缓存失效时间
+
+    'login_time_out'=>1,//登陆失效时间
 ];
