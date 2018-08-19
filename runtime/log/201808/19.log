@@ -1,0 +1,152 @@
+[ 2018-08-19T09:57:22+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/test
+[ log ] localhost:81/jobmana/public/index.php/api/v1/test [运行时间：0.103989s][吞吐率：9.62req/s] [内存消耗：1,283.91kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.test',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'be9dd035-d52b-40ad-a897-caf8e640c5df',
+  'cache-control' => 'no-cache',
+  'version' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T09:57:43+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
+[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.026654s][吞吐率：37.52req/s] [内存消耗：1,283.99kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.test',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '04dc921e-fc89-439a-8d60-9409cc8919dc',
+  'cache-control' => 'no-cache',
+  'version' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T09:58:19+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
+[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.044363s][吞吐率：22.54req/s] [内存消耗：1,283.05kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.time',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '8a8a438c-fd62-4982-94cd-ac966b814ad6',
+  'cache-control' => 'no-cache',
+  'version' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T10:02:20+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
+[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.026221s][吞吐率：38.14req/s] [内存消耗：1,425.06kb] [文件加载：47]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.time',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '56ccf744-c60e-4031-b07c-7104b79aa263',
+  'cache-control' => 'no-cache',
+  'version' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ver' => 'v1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Time->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Time.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T10:03:41+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
+[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.028431s][吞吐率：35.17req/s] [内存消耗：1,497.48kb] [文件加载：51]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.test',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '05fb2780-f8c7-4f6e-9fd3-b07a72094786',
+  'cache-control' => 'no-cache',
+  'version' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ver' => 'v1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

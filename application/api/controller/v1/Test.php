@@ -1,6 +1,6 @@
 <?php 
 
-namespace app\api\controller;
+namespace app\api\controller\v1;
 
 use app\common\lib\exception\ApiException;
 
@@ -8,10 +8,10 @@ use app\common\lib\Aes;
 
 use app\common\lib\IAuth;
 
-use app\api\Controller;
+use think\Controller;
 
 
-class Test 
+class Test extends Controller
 {
 	
 	public function index()

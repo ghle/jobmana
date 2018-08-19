@@ -1,6 +1,6 @@
 <?php 
 
-namespace app\api\controller;
+namespace app\api\controller\v1;
 
 use app\api\Controller;
 
@@ -17,6 +17,7 @@ class Login extends Common
 	 */
 	public function index()
 	{
+		
 		
 		// 验证参数
 		$param=$this->params;
