@@ -1,5 +1,5 @@
 <?php
-namespace app\api\controller;
+namespace app\api\controller\v1;
 use think\Controller;
 use think\Image;
 use think\Request;
@@ -18,7 +18,7 @@ class Common extends Controller {
                
             ),
          ),
-        'Login' => array(
+        'v1.Login' => array(
             'index'           => array(
                 'username' => 'require|length:11|number',
                 'password' => 'require|length:11|number',
@@ -38,8 +38,12 @@ class Common extends Controller {
         // $this->check_time($this->request->only(['time']));
         // $this->check_token($this->request->param());
         $this->params = $this->check_params($this->request->param(true));
-      
-        $this->check_sign();
+        try {
+             $this->check_sign();
+        } catch (\Exception $e) {
+            throw new ApiException($e->getMessage(), 1);
+            
+        }
         
     }
 

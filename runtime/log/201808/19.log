@@ -150,3 +150,342 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2018-08-19T10:21:08+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.035918s][吞吐率：27.84req/s] [内存消耗：1,253.40kb] [文件加载：48]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------926327267062686255638095',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'a154df92-a528-4e69-99e9-45d0ef3ed6fd',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\api\controller\v1\Common' not found[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php:11]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:21:45+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.037866s][吞吐率：26.41req/s] [内存消耗：1,312.72kb] [文件加载：50]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------431996330358128732418555',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '4fd2b017-4445-4c3e-a2da-62ab954abe90',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T10:22:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.043906s][吞吐率：22.78req/s] [内存消耗：1,536.20kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------277810742273904784381238',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '923dc9ac-c8c8-4ca5-8343-47334f078193',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:23:48+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.036396s][吞吐率：27.48req/s] [内存消耗：1,536.20kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------238836788684264805202343',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'ab79c215-e883-45cb-8efc-39b61df0b4a4',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:24:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.031328s][吞吐率：31.92req/s] [内存消耗：1,536.20kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------056193237670859952412613',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '21b761a2-36a5-4b49-92c8-efb798c6485b',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:25:17+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.162971s][吞吐率：6.14req/s] [内存消耗：2,149.92kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------448339213182412066642531',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'a292e858-eefb-458d-93b5-cfc8a3be8199',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\v1\Login->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009621s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.010049s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `telphone` = '15703276360' LIMIT 1 [ RunTime:0.000799s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004653s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `tp_perman`  SET `token`='0c33fd542a04ed6cd208ad2f8ad843118228805e',`update_time`=1534213517  WHERE  `telphone` = '15703276360' [ RunTime:0.020184s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:26:42+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.046345s][吞吐率：21.58req/s] [内存消耗：1,253.32kb] [文件加载：48]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------303028193082227944285180',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'fbd9ec74-b83c-4e07-aa7c-11a8af2763c4',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\api\controller\v1\Common' not found[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php:13]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:28:13+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.035913s][吞吐率：27.85req/s] [内存消耗：1,536.14kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------249495350649433276132354',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '6626e738-89fa-44c2-b0e3-3bcbefb10c06',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Common.php:132]
+
+---------------------------------------------------------------
+[ 2018-08-19T10:28:43+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
+[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.170924s][吞吐率：5.85req/s] [内存消耗：2,149.93kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '292',
+  'content-type' => 'multipart/form-data; boundary=--------------------------610824140842342327328690',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'b4ad90ca-eb8f-4df7-9000-b53aaa02978f',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\v1\Login->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010904s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.019187s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `telphone` = '15703276360' LIMIT 1 [ RunTime:0.001535s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010375s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `tp_perman`  SET `token`='49f0eb28dba8d513a269469c6cfe0da87bf45768',`update_time`=1534213723  WHERE  `telphone` = '15703276360' [ RunTime:0.055508s ]
+
+---------------------------------------------------------------
