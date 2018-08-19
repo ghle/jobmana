@@ -16,6 +16,7 @@ Route::post('api/:ver/login','api/:ver.Login/index');
 // 用户信息
 Route::post('api/:ver/user', 'api/:ver.user/read');
 
+Route::get('api/:ver/publiclist', 'api/:ver.index/publiclist');
 // 测试
 
 Route::get('api/:ver/abc', 'api/:ver.test/index');

@@ -30,6 +30,12 @@ class Common extends Controller {
                     'access_token' =>'require'
                 ),
             
+         ),
+        'v1.Index' => array(
+                'publiclist'   => array(
+                    
+                ),
+            
          )
             
     );
