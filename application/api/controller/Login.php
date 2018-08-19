@@ -6,36 +6,21 @@ use app\api\Controller;
 
 use app\common\lib\IAuth;
 
-class User extends Common
+use think\Cache;
+class Login extends Common
 {
-
-	/**
-	 * [token 获取登录唯一标识]
-	 * @return [type] [description]
-	 */
-	public function token()
-	{
-		$param=$this->params;
-
-		if (!$this->isMobile($param['phone'])) {
-			$this->return_msg(0,'请输入正确的手机号',[]);
-		}
-		// 时间time已经common.php做限制
-		return IAuth::setAppLoginToken($param['phone']);
-	}
-
 	/**
 	 * [login 用户登录接口]
 	 * @author lucky
 	 * @DateTime 2018-08-18T11:30:10+0800
 	 * @return   [type]                   [description]
 	 */
-	public function login()
+	public function index()
 	{
 		
 		// 验证参数
 		$param=$this->params;
-		$token=$param['access_token'];
+		// $token=$param['access_token'];
 		$username=$param['username'];
 		$password=$param['password'];
 
@@ -43,16 +28,16 @@ class User extends Common
 		if (empty($username)) {
 			$this->return_msg(0,'用户名不能为空',[]);	
 		}
-		if (empty($password)) {
-			$this->return_msg(0,'密码不能为空',[]);	
-		}
-		if (empty($token)) {
-			$this->return_msg(0,'token不能为空',[]);	
-		}
 		if (!$this->isMobile($username)) {
 			$this->return_msg(0,'用户名不正确1',[]);
 		}
-
+		if (empty($password)) {
+			$this->return_msg(0,'密码不能为空',[]);	
+		}
+		// if (empty($token)) {
+		// 	$this->return_msg(0,'token不能为空',[]);	
+		// }
+		
 		$res=db('perman')->where('telphone',$username)->find();
 			
 	//1.用户不存在

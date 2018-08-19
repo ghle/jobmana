@@ -15,14 +15,14 @@ class Common extends Controller {
     protected $rules = array(
         'Test' => array(
             'index'           => array(
-                'phone' => 'require', 
+               
             ),
          ),
-        'User' => array(
-            'login'           => array(
+        'Login' => array(
+            'index'           => array(
                 'username' => 'require|length:11|number',
                 'password' => 'require|length:11|number',
-                'access_token'    =>'require'
+              
             ),
             'token'           =>array(
                 'phone' => 'require|length:11|number',
@@ -35,10 +35,12 @@ class Common extends Controller {
     protected function _initialize() {
         parent::_initialize();
         $this->request = Request::instance();
-        $this->check_time($this->request->only(['time']));
+        // $this->check_time($this->request->only(['time']));
         // $this->check_token($this->request->param());
-        // $this->check_sign();
         $this->params = $this->check_params($this->request->param(true));
+      
+        $this->check_sign();
+        
     }
 
     public function check_sign()
@@ -59,7 +61,7 @@ class Common extends Controller {
 
         // 1、文件  2、mysql 3、redis
         $this->headers = $header;
-      
+
     }
     /**
      * 验证请求是否超时
@@ -95,6 +97,7 @@ class Common extends Controller {
      * @return [json]      [token验证结果]
      */
     public function check_token($arr) {
+      
         /*********** api传过来的token  ***********/
         if (!isset($arr['token']) || empty($arr['token'])) {
             $this->return_msg(400, 'token不能为空!');
@@ -106,6 +109,8 @@ class Common extends Controller {
         foreach ($arr as $key => $value) {
             $service_token .= md5($value);
         }
+
+
         $service_token = md5('api_' . $service_token . '_api'); // 服务器端即时生成的token
         /*********** 对比token,返回结果  ***********/
         if ($app_token !== $service_token) {
@@ -130,7 +135,6 @@ class Common extends Controller {
         return $arr;
     }
 
-
     //验证是否是正确的手机号
    public function isMobile($phone)
     {
@@ -142,6 +146,8 @@ class Common extends Controller {
             return false;
         }
     }
+            
+
    
    
 }

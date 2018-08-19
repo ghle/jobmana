@@ -11,13 +11,19 @@ use app\common\lib\IAuth;
 use app\api\Controller;
 
 
-class Test extends Common
+class Test 
 {
 	
 	public function index()
 	{
 		// 一级数据异常校验 validate 
-		$param=$this->params;
+		// $param=$this->params;
+		$param=[
+			'username'=>'wangjinlu',
+			'target'	=>'123456',
+			'time'=>IAuth::timestamp()
+		];
+	
 
 		// $param['time']=IAuth::timestamp();
 
@@ -38,6 +44,7 @@ class Test extends Common
 			throw new ApiException($e->getmessage(), 1);
 			
 		}
+
 		
 		// return return_msg(0,'OK',$param,201);
 		

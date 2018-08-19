@@ -49,6 +49,7 @@ class IAuth {
         // diid=xx&app_type=3
         parse_str($str, $arr);
 
+    
         // 基于不同的场景验证不同的参数
        
         if(!is_array($arr) || empty($arr['target'])|| $arr['target'] != $data['target']) {
@@ -57,6 +58,7 @@ class IAuth {
 
         if(!config('app_debug')) {
             if ((time() - ceil($arr['time'] / 1000)) > config('app.app_sign_time')) {
+
                 return false;
             }
             // echo Cache::get($data['sign']);exit;

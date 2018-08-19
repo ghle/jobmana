@@ -19,8 +19,8 @@ return [
     	'ios',
     	'android'
     ],
-    'app_sign_time' => 10,// sign失效时间
-    'app_sign_cache_time' => 20,// sign 缓存失效时间
+    'app_sign_time' => 6000,// sign失效时间
+    'app_sign_cache_time' => 120000,// sign 缓存失效时间
 
     'login_time_out'=>1,//登陆失效时间
 ];

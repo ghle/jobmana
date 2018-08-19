@@ -11,7 +11,7 @@
 use think\Route;
 
 // 用户登陆
-Route::post('login','api/user/login');
+Route::post('login','api/Login/index');
 //获取用户登录标识
 Route::post('token','api/user/token');
 // 测试
