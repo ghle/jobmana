@@ -1,178 +1,26 @@
-[ 2018-08-19T09:57:22+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/test
-[ log ] localhost:81/jobmana/public/index.php/api/v1/test [运行时间：0.103989s][吞吐率：9.62req/s] [内存消耗：1,283.91kb] [文件加载：49]
+[ 2018-08-19T11:18:55+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.201802s][吞吐率：4.96req/s] [内存消耗：2,132.98kb] [文件加载：56]
 [ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'api',
-    1 => 'v1.test',
-    2 => 'index',
+    1 => 'v1.user',
+    2 => 'read',
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------369481496605621662468520',
   'accept-encoding' => 'gzip, deflate',
   'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
   'host' => 'localhost:81',
   'accept' => '*/*',
   'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'be9dd035-d52b-40ad-a897-caf8e640c5df',
-  'cache-control' => 'no-cache',
-  'version' => '1',
-)
-[ info ] [ PARAM ] array (
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T09:57:43+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
-[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.026654s][吞吐率：37.52req/s] [内存消耗：1,283.99kb] [文件加载：49]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.test',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '04dc921e-fc89-439a-8d60-9409cc8919dc',
-  'cache-control' => 'no-cache',
-  'version' => '1',
-)
-[ info ] [ PARAM ] array (
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T09:58:19+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
-[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.044363s][吞吐率：22.54req/s] [内存消耗：1,283.05kb] [文件加载：49]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.time',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '8a8a438c-fd62-4982-94cd-ac966b814ad6',
-  'cache-control' => 'no-cache',
-  'version' => '1',
-)
-[ info ] [ PARAM ] array (
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T10:02:20+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
-[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.026221s][吞吐率：38.14req/s] [内存消耗：1,425.06kb] [文件加载：47]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.time',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '56ccf744-c60e-4031-b07c-7104b79aa263',
-  'cache-control' => 'no-cache',
-  'version' => '1',
-)
-[ info ] [ PARAM ] array (
-  'ver' => 'v1',
-)
-[ info ] [ RUN ] app\api\controller\v1\Time->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Time.php ]
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T10:03:41+08:00 ] ::1 ::1 GET /jobmana/public/index.php/api/v1/abc
-[ log ] localhost:81/jobmana/public/index.php/api/v1/abc [运行时间：0.028431s][吞吐率：35.17req/s] [内存消耗：1,497.48kb] [文件加载：51]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.test',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '05fb2780-f8c7-4f6e-9fd3-b07a72094786',
-  'cache-control' => 'no-cache',
-  'version' => '1',
-)
-[ info ] [ PARAM ] array (
-  'ver' => 'v1',
-)
-[ info ] [ RUN ] app\api\controller\v1\Test->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Test.php ]
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T10:21:08+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.035918s][吞吐率：27.84req/s] [内存消耗：1,253.40kb] [文件加载：48]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------926327267062686255638095',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'a154df92-a528-4e69-99e9-45d0ef3ed6fd',
+  'postman-token' => '24e6a7e1-0683-46d2-b2c2-3bdfcc4672b2',
   'cache-control' => 'no-cache',
   'target' => '123456',
   'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
@@ -180,222 +28,41 @@
 [ info ] [ PARAM ] array (
   'username' => '15703276360',
   'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [1]Class 'app\api\controller\v1\Common' not found[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php:11]
-
----------------------------------------------------------------
-[ 2018-08-19T10:21:45+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.037866s][吞吐率：26.41req/s] [内存消耗：1,312.72kb] [文件加载：50]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------431996330358128732418555',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '4fd2b017-4445-4c3e-a2da-62ab954abe90',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-
----------------------------------------------------------------
-[ 2018-08-19T10:22:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.043906s][吞吐率：22.78req/s] [内存消耗：1,536.20kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------277810742273904784381238',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '923dc9ac-c8c8-4ca5-8343-47334f078193',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
-
----------------------------------------------------------------
-[ 2018-08-19T10:23:48+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.036396s][吞吐率：27.48req/s] [内存消耗：1,536.20kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------238836788684264805202343',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'ab79c215-e883-45cb-8efc-39b61df0b4a4',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
-
----------------------------------------------------------------
-[ 2018-08-19T10:24:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.031328s][吞吐率：31.92req/s] [内存消耗：1,536.20kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------056193237670859952412613',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '21b761a2-36a5-4b49-92c8-efb798c6485b',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\Common.php:132]
-
----------------------------------------------------------------
-[ 2018-08-19T10:25:17+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.162971s][吞吐率：6.14req/s] [内存消耗：2,149.92kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------448339213182412066642531',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'a292e858-eefb-458d-93b5-cfc8a3be8199',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
+  'access_token' => '1234',
   'ver' => 'v1',
 )
 [ info ] [ CACHE ] INIT File
-[ info ] [ RUN ] app\api\controller\v1\Login->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php ]
 [ info ] [ DB ] INIT mysql
-[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.009621s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.010049s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `telphone` = '15703276360' LIMIT 1 [ RunTime:0.000799s ]
-[ sql ] [ DB ] CONNECT:[ UseTime:0.004653s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
-[ sql ] [ SQL ] UPDATE `tp_perman`  SET `token`='0c33fd542a04ed6cd208ad2f8ad843118228805e',`update_time`=1534213517  WHERE  `telphone` = '15703276360' [ RunTime:0.020184s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011731s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.014357s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001010s ]
 
 ---------------------------------------------------------------
-[ 2018-08-19T10:26:42+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.046345s][吞吐率：21.58req/s] [内存消耗：1,253.32kb] [文件加载：48]
+[ 2018-08-19T11:19:20+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.091930s][吞吐率：10.88req/s] [内存消耗：2,132.93kb] [文件加载：56]
 [ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
+    1 => 'v1.user',
+    2 => 'read',
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------303028193082227944285180',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------365455491252247189988866',
   'accept-encoding' => 'gzip, deflate',
   'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
   'host' => 'localhost:81',
   'accept' => '*/*',
   'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'fbd9ec74-b83c-4e07-aa7c-11a8af2763c4',
+  'postman-token' => 'da330f8b-4878-4b3c-9117-05097ead0c30',
   'cache-control' => 'no-cache',
   'target' => '123456',
   'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
@@ -403,89 +70,1561 @@
 [ info ] [ PARAM ] array (
   'username' => '15703276360',
   'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [1]Class 'app\api\controller\v1\Common' not found[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php:13]
-
----------------------------------------------------------------
-[ 2018-08-19T10:28:13+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.035913s][吞吐率：27.85req/s] [内存消耗：1,536.14kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------249495350649433276132354',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => '6626e738-89fa-44c2-b0e3-3bcbefb10c06',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
-  'ver' => 'v1',
-)
-[ info ] [ LOG ] INIT File
-[ error ] [8]未定义数组索引: v1.Login[E:\phpstudy\WWW\jobmana\application\api\controller\v1\Common.php:132]
-
----------------------------------------------------------------
-[ 2018-08-19T10:28:43+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/login
-[ log ] localhost:81/jobmana/public/index.php/api/v1/login [运行时间：0.170924s][吞吐率：5.85req/s] [内存消耗：2,149.93kb] [文件加载：55]
-[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'api',
-    1 => 'v1.Login',
-    2 => 'index',
-  ),
-  'convert' => false,
-)
-[ info ] [ HEADER ] array (
-  'connection' => 'close',
-  'content-length' => '292',
-  'content-type' => 'multipart/form-data; boundary=--------------------------610824140842342327328690',
-  'accept-encoding' => 'gzip, deflate',
-  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
-  'host' => 'localhost:81',
-  'accept' => '*/*',
-  'user-agent' => 'PostmanRuntime/7.1.5',
-  'postman-token' => 'b4ad90ca-eb8f-4df7-9000-b53aaa02978f',
-  'cache-control' => 'no-cache',
-  'target' => '123456',
-  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
-)
-[ info ] [ PARAM ] array (
-  'username' => '15703276360',
-  'password' => '15120801095',
+  'access_token' => '1234',
   'ver' => 'v1',
 )
 [ info ] [ CACHE ] INIT File
-[ info ] [ RUN ] app\api\controller\v1\Login->index[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\Login.php ]
 [ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012656s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.013050s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001140s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:20:28+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.088599s][吞吐率：11.29req/s] [内存消耗：2,132.96kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------429688094738685668976961',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '2bbd84f2-454d-423d-b48a-fa1052d47634',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011061s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.020453s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001201s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:21:19+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.102738s][吞吐率：9.73req/s] [内存消耗：2,133.03kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------764638425285749742256025',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e4757f5f-8e15-491a-a26b-57e77c5a00a2',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012409s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.026455s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000813s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:21:40+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.049272s][吞吐率：20.30req/s] [内存消耗：1,430.47kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------499676797207777095480217',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'fed2016b-c38d-48c8-b83f-824c1acc0cf9',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T11:21:59+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.065542s][吞吐率：15.26req/s] [内存消耗：1,430.57kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------747339152298361809033338',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '34801e9c-2e74-4fd0-b8e1-0b3fde014246',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T11:22:07+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.054624s][吞吐率：18.31req/s] [内存消耗：1,430.57kb] [文件加载：49]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------508256248342145725237209',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '2166588e-24cf-4fcb-af24-4c68ac2ab73f',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-19T11:22:23+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.073499s][吞吐率：13.61req/s] [内存消耗：2,132.84kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------006472717364820296471963',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'fe561dd5-fce7-4a23-b01e-4c6ce27af340',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000870s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.006234s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000507s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:22:47+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.087410s][吞吐率：11.44req/s] [内存消耗：2,131.84kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------271931225708868005947980',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '2d4cbeb9-65a5-4192-ab59-dd216f120ffb',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010904s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.019187s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `telphone` = '15703276360' LIMIT 1 [ RunTime:0.001535s ]
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010375s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
-[ sql ] [ SQL ] UPDATE `tp_perman`  SET `token`='49f0eb28dba8d513a269469c6cfe0da87bf45768',`update_time`=1534213723  WHERE  `telphone` = '15703276360' [ RunTime:0.055508s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010776s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012255s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000617s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:23:03+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.069183s][吞吐率：14.45req/s] [内存消耗：2,132.17kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------113013823088549580874447',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '21d0617a-4385-4455-8bb7-cc8769d15065',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010804s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.006110s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '049f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000539s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:23:26+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.071464s][吞吐率：13.99req/s] [内存消耗：2,134.45kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------615036928653599032535552',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '52dc348c-acc6-4e1b-9239-3d345a2a7a25',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011139s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.006319s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000536s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:23:32+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.090505s][吞吐率：11.05req/s] [内存消耗：2,136.44kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------505610744401513449386125',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '5477af1c-114a-4c2d-bcf2-123fe8ab5f38',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011586s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012030s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000590s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:23:56+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.097166s][吞吐率：10.29req/s] [内存消耗：2,136.82kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------652789477028692171921121',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '1be4d863-5ec6-4435-95ab-3492d2b837db',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011349s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012149s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000581s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:24:37+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.078224s][吞吐率：12.78req/s] [内存消耗：2,132.50kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------324400974487654280970871',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '143436c9-46cb-4041-b777-9effd6e2c492',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009697s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012111s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000523s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:24:50+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.089891s][吞吐率：11.12req/s] [内存消耗：2,132.74kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------301872685479651809569592',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '51b5d431-d444-4663-85a9-3ae63613322c',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010368s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.018657s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001118s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:25:31+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.083069s][吞吐率：12.04req/s] [内存消耗：2,132.50kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------614886334882594669748206',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '7d7e6053-f9bb-4881-afe3-e6847ee2072c',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010895s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.018989s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001143s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:26:57+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.073664s][吞吐率：13.58req/s] [内存消耗：2,132.17kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------435876167985406148358784',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '96695792-558b-4560-8f2b-28697f4e7883',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000979s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012278s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000545s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:27:12+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.067015s][吞吐率：14.92req/s] [内存消耗：2,159.89kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------261765061504576061435787',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'f37979b6-4599-4634-81a7-a1a682e15d6f',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000934s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012656s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000745s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000628s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:29:00+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.076158s][吞吐率：13.13req/s] [内存消耗：2,132.63kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------036878566582102459024111',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'ce7b6811-a16a-4eca-9b3b-2c72fec69dee',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011173s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.006306s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000556s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:29:15+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.117956s][吞吐率：8.48req/s] [内存消耗：2,159.89kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------995664014032859358429414',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e42900fd-b477-4dc6-976c-ebf6a93fea17',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011531s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.021413s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000776s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011743s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000656s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:29:39+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.081596s][吞吐率：12.26req/s] [内存消耗：2,160.03kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------001955765871145138521457',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '9c760820-acbd-409c-b35f-f5eb9f474823',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.013445s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000651s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001849s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000654s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:29:50+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.078071s][吞吐率：12.81req/s] [内存消耗：2,132.59kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------179079739469967872829480',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '1955e698-a014-4deb-81b2-1d1b8d585134',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010151s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012196s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000640s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:30:30+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.100384s][吞吐率：9.96req/s] [内存消耗：2,132.56kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------254912928019907053366298',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'a9f6d22b-98bf-4842-aa8d-22fce92dfa85',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010453s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.026632s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001857s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:30:37+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.066452s][吞吐率：15.05req/s] [内存消耗：2,132.48kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------644787814746780070214532',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '4c5232ca-0747-48d8-8d98-a57206f92da5',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000904s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012047s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '-49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000497s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:31:13+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.080675s][吞吐率：12.40req/s] [内存消耗：2,136.44kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------934764492654411340171614',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '9b7402e1-8276-4ff7-9d0f-a1cf57f1d8de',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011465s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.013982s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000558s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:31:26+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.086387s][吞吐率：11.58req/s] [内存消耗：2,134.06kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------348676848623685025610658',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '39d32a87-b173-49ea-b1a3-5e08e24db709',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010773s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012470s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000610s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:31:54+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.074297s][吞吐率：13.46req/s] [内存消耗：2,136.74kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------883724139660111274512570',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'd4591dab-9c0d-4908-9395-f90ee68884ee',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010941s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012489s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000550s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:32:28+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.087578s][吞吐率：11.42req/s] [内存消耗：2,137.14kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------134282139743677330111248',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '67c5aeaa-cb02-44c2-a198-43ee3865edb0',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011554s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.006444s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000552s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:34:00+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.122511s][吞吐率：8.16req/s] [内存消耗：2,132.41kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '407',
+  'content-type' => 'multipart/form-data; boundary=--------------------------873544658356847937875300',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'b8ca186a-c276-43ca-ab96-f9c20fc5194c',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '1234',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010006s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012085s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '1234' LIMIT 1 [ RunTime:0.000583s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:34:15+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.120182s][吞吐率：8.32req/s] [内存消耗：2,134.11kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------292325703328936321453646',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e709beb7-006a-4f88-98ca-6e9f2d451051',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011901s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.031933s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001708s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:35:41+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.090666s][吞吐率：11.03req/s] [内存消耗：2,134.22kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------396976882934659459663511',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'bd8c257b-e100-4f22-a9e2-4e12c9ce7f9f',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010944s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.016835s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000671s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:37:02+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.161566s][吞吐率：6.19req/s] [内存消耗：2,137.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------217244274926320157716576',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '38c0e943-ce42-4f90-8eea-5bd395020080',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011688s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.026500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001158s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:39:29+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.117572s][吞吐率：8.51req/s] [内存消耗：2,283.13kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------907955487155683532860419',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'd98188f7-0d5b-4895-8eca-c29b66979a29',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000932s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012471s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000533s ]
+[ error ] [1]Class 'app\api\controller\v1\Exception' not found[E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php:22]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:39:51+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.856878s][吞吐率：1.17req/s] [内存消耗：2,311.34kb] [文件加载：66]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------360761837976899065667655',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'ed6ed159-f918-4a47-a52b-252d322855e1',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010856s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012744s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000595s ]
+[ error ] [1]Uncaught exception 'think\exception\ErrorException' with message 'Array to string conversion' in E:\phpstudy\WWW\jobmana\thinkphp\library\think\exception\Handle.php:46
+Stack trace:
+#0 E:\phpstudy\WWW\jobmana\thinkphp\library\think\exception\Handle.php(46): think\Error::appError(8, 'Array to string...', 'E:\\phpstudy\\WWW...', 46, Array)
+#1 E:\phpstudy\WWW\jobmana\thinkphp\library\think\Error.php(43): think\exception\Handle->report(Object(app\common\lib\exception\ApiException))
+#2 [internal function]: think\Error::appException(Object(app\common\lib\exception\ApiException))
+#3 {main}
+  thrown[E:\phpstudy\WWW\jobmana\thinkphp\library\think\exception\Handle.php:46]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:40:11+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.133197s][吞吐率：7.51req/s] [内存消耗：2,137.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------673863713562201641089155',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => 'e83e4010-d2e8-4078-9a60-4dba60cde2bc',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010888s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.013270s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000544s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:40:42+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.110557s][吞吐率：9.05req/s] [内存消耗：2,137.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------135357037331226202278292',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '5c38f5ef-7e03-4006-875c-fbbe320a8689',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011959s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.020370s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001132s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:42:12+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.091116s][吞吐率：10.98req/s] [内存消耗：2,137.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------278577709109344646985289',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '8f7194dd-4db4-46f8-bbac-19e16470565f',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010777s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.012322s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.000613s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:43:15+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.115081s][吞吐率：8.69req/s] [内存消耗：2,137.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------682264508757413228095809',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '0b225f15-1589-4e58-a411-cd0d34a740d4',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011739s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.018970s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001589s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:44:36+08:00 ] ::1 ::1 POST /jobmana/public/index.php/api/v1/user/
+[ log ] localhost:81/jobmana/public/index.php/api/v1/user/ [运行时间：0.093857s][吞吐率：10.65req/s] [内存消耗：2,137.07kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\jobmana\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.user',
+    2 => 'read',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '443',
+  'content-type' => 'multipart/form-data; boundary=--------------------------672092757088064213739840',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=drpp8n49prnq8p20fjh1g4rgp3',
+  'host' => 'localhost:81',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.5',
+  'postman-token' => '581dd749-5101-4c5b-93ce-cead961c2479',
+  'cache-control' => 'no-cache',
+  'target' => '123456',
+  'sign' => 'aJr310UGwrZqn8sOvjE0e4AdZdl4O5fWFsUriH7zcOk58aDZqbEfV213eFWQK0fOF4YcwQaOJMPU0tpF0p011g',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15703276360',
+  'password' => '15120801095',
+  'access_token' => '49f0eb28dba8d513a269469c6cfe0da87bf45768',
+  'ver' => 'v1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v1\User->read[ E:\phpstudy\WWW\jobmana\application\api\controller\v1\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010772s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.013767s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001182s ]
+
+---------------------------------------------------------------
+[ 2018-08-19T11:48:44+08:00 ] [ error ] [0]授权码sign失败
+
+---------------------------------------------------------------
+[ 2018-08-19T11:48:58+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010601s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_perman` [ RunTime:0.018915s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_perman` WHERE  `token` = '49f0eb28dba8d513a269469c6cfe0da87bf45768' LIMIT 1 [ RunTime:0.001106s ]
 
 ---------------------------------------------------------------

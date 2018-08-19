@@ -13,7 +13,10 @@ use think\Route;
 // 用户登陆
 Route::post('api/:ver/login','api/:ver.Login/index');
 
+// 用户信息
+Route::post('api/:ver/user', 'api/:ver.user/read');
+
 // 测试
-// Route::post('test','api/test/index');
-// 
+
 Route::get('api/:ver/abc', 'api/:ver.test/index');
+

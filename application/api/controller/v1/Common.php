@@ -14,20 +14,22 @@ class Common extends Controller {
     public $headers = '';//头部信息
     protected $rules = array(
         'Test' => array(
-            'index'           => array(
+            'index' => array(
                
             ),
          ),
         'v1.Login' => array(
-            'index'           => array(
-                'username' => 'require|length:11|number',
-                'password' => 'require|length:11|number',
+            'index'=> array(
+                    'username' => 'require|length:11|number',
+                    'password' => 'require|length:11|number',
               
             ),
-            'token'           =>array(
-                'phone' => 'require|length:11|number',
-                'time' => 'require',
-            )
+        ),
+        'v1.User' => array(
+                'read'   => array(
+                    'access_token' =>'require'
+                ),
+            
          )
             
     );

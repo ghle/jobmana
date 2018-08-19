@@ -15,30 +15,34 @@ class UserAuth extends Common
 	public function _initialize()
 	{
 		parent::_initialize();
-		if ($this->islogin()) {
+
+		if (!$this->islogin()) {
+
 			$this->return_msg(0,'您没有登录',401);
 		}
 	}
 	// 判断是否登录
 	public function islogin()
 	{
-
+		
 		if (empty($this->params['access_token'])) {
 			return false;
 		}
+		
 		$res=db('perman')->where(['token'=>$this->params['access_token']])->find();
 		
-		if (empty($res)) {
+		if (empty($res)){
+
 			return false;
 		}
 		// 判断是否过期
-		if (time()>$res->update_time) {
+		if (time()>$res['update_time']) {
 			return false;
 		}
 
-		// $this->user=$res;
+		$this->user=$res;
 
-		// return true;
+		return true;
 	}
 
 }
